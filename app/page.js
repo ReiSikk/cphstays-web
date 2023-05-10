@@ -1,8 +1,12 @@
 import Image from 'next/image'
+import Footer from './components/Footer'
+import NavigationBar from './components/NavigationBar'
 import styles from './page.module.css'
 
 export default function Home() {
   return (
+    <>
+    <NavigationBar />
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -91,5 +95,7 @@ export default function Home() {
         </a>
       </div>
     </main>
+    <Footer />
+    </>
   )
 }
