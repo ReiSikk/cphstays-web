@@ -7,7 +7,11 @@
   --font-headings: 'Archivo', sans-serif;
   --font-poppins:  'Poppins', sans-serif;
   --color-background: #f2f2f2;
+  --color-primary: #fafafa;
+  --color-accent-blue: #D4FCFF;
   --color-body-text: #1a1a1a;
+  --color-darkblue: #020426;
+  --color-btn-hover: #020426;
   --fs-btn: 1rem;
   --fw-btn: '600'
 
@@ -35,6 +39,8 @@ body {
   font-size: 100%;
   background: var(--color-background);
   color: var(--color-body-text);
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 a {
@@ -43,17 +49,17 @@ a {
 }
 p {
   font-family: var(--font-p);
-  font-weight: '400';
+  font-weight: 400;
 }
 h1,h2,h3,h4,h5{
   font-family: var(--font-headings);
 }
 h1 {
-  font-weight: '700';
+  font-weight: 700;
   font-size: 3.052rem;
 }
 h2 {
-  font-weight:'500';
+  font-weight:500;
   font-size: 2.441rem;
 
 }
@@ -67,8 +73,215 @@ h5 {
   font-size: 1.25rem;
 }
 h3,h4,h5 {
-  font-weight: '600';
+  font-weight: 600;
 }
+.primary-btn {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-accent-blue);
+  font-family: var(--font-headings);
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+color: #020426;
+border-radius: 30px;
+}
+.primary-btn:hover {
+  background-color: var(--color-btn-hover);
+  color: var(--color-accent-blue);
+  cursor: pointer;
+}
+
+/* ? Burgmermenu starts here */
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: 100px 1000px 0 0px;
+  padding: 50px;
+  padding-top: 40px;
+  
+  background: var(--color-background);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translateX(100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/* Slide it in from the right */
+#menuToggle input:checked ~ ul {
+  transform: translateX(0);
+}
+/* ? Burgmermenu ends here */
+
+
+/* ?Navigation bar starts here */
+.logo-img {
+  height:fit-content;
+  max-height:28px;
+  max-width: 200px;
+  margin-top: 4px;
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 3rem;
+position: fixed;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+max-width: 90vw;
+height: 5rem;
+top: 20px;
+background: #020426;
+border-radius: 8px;
+}
+nav .primary-btn {
+  margin-left: 0.5rem;
+}
+.nav-right {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+align-self: center;
+}
+.nav-left a {
+  max-height:28px;
+}
+nav a {
+  color: var(--color-primary);
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+/* ?Navigation bar ends here */
 
 @media (prefers-color-scheme: dark) {
   html {

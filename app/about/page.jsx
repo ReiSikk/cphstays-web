@@ -1,11 +1,11 @@
-import Link from 'next/link'
 import React from 'react'
 
 function page() {
   return (
     <>
-    <nav>About us navBar</nav>
-    <Link href="/">Home</Link>
+    <article>
+        <h1>About page here</h1>
+    </article>
     </>
   )
 }
