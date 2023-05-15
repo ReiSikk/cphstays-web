@@ -11,13 +11,14 @@ function NavigationBar() {
   return (
     <>
     <nav>
-      <div className="nav-left">
-       <Link href="/">
-        <Image src="/cphstays-logo.svg" alt="cphstays logo" width={100} height={100} className="logo-img" />
-        </Link>
-        </div>
         {/* If screen is smaller than 899px reveal burgermenu */}
         {matches ? <BurgerMenu/> :
+        <>
+          <div className="nav-left">
+          <Link href="/">
+           <Image src="/cphstays-logo.svg" alt="cphstays logo" width={100} height={100} className="logo-img" />
+           </Link>
+         </div>
         <div className="nav-right">
        <Link href="/apartments">
           Apartments
@@ -33,9 +34,10 @@ function NavigationBar() {
         </Link>
           <Link className="primary-btn" href="/corphousing">Corporate housing</Link>
         </div>
+        </>
 }
         </nav>
-    </>
+        </>
   )
 }
 
