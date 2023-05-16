@@ -5,10 +5,11 @@ import Image from 'next/image'
 function Footer() {
   return (
     <>
-    <div id="footerSection">
+    <footer>
+      <div id="footerSection">
       <div className="footer-left">
     <Link href="/">
-     <Image src="/cphstays-logo.svg" alt="cphstays logo" width={200} height={200} className="logo-img" />
+     <Image src="/images/cphstays-logo.svg" alt="cphstays logo" width={200} height={200} className="logo-img" />
      </Link>
      <p>Description of company or sth</p>
       </div>
@@ -42,7 +43,25 @@ function Footer() {
         </ul>
         </div>
         </div>
-      </div>
+        </div>
+        <div className="footer-links">
+          <h5>Social</h5>
+        <p className="copyright">Copyright ManageMyAir 2023 ©</p>
+        <div className="footer-some">
+        <Link href="https://www.facebook.com/Managemyair/">
+          <Image src="/images/facebook-logo.svg" alt="facebook logo" width={28} height={28} className="some-logo" />
+        </Link>
+        <Link href="https://www.instagram.com/managemyair/?hl=en">
+          <Image src="/images/instagram-logo.svg" alt="instagram logo" width={28} height={28} className="some-logo" />
+        </Link>
+        <Link href="https://www.linkedin.com/company/managemyair/about/">
+          <Image src="/images/linkedin-logo.svg" alt="linkedin logo" width={28} height={28} className="some-logo" />
+        </Link>
+        </div>
+
+
+        </div>
+      </footer>
       </>
   )
 }
