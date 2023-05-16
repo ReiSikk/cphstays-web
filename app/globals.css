@@ -433,6 +433,53 @@ filter: saturate(0.5);
 
 /* ?Footer ends here */
 
+
+/* ? Landing page starts here */
+.hero-img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 1920px;
+  max-height: 66vh;
+  padding: 1rem 3rem 1rem 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filtering {
+  background: var(--color-primary);
+    color: var(--color-darkblue);
+    position: relative;
+    margin-top: -15%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    min-height: 15vh;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 16px 0px;
+}
+.search-btn {
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: max-content;
+}
+.search-img {
+  max-height: 48px;
+  width: 100%;
+  height: auto;
+}
+.hero-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+/* ? Landing page ends here */
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
