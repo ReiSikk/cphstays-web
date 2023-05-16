@@ -57,7 +57,6 @@ a {
 }
 a:hover {
   text-decoration: underline;
-color: var(--color-accent-blue);
 }
 .no-scale:hover {
   scale: 1;
@@ -116,6 +115,7 @@ border-radius: 30px;
   background-color: var(--color-btn-hover);
   color: var(--color-accent-blue);
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* ? Burgmermenu starts here */
@@ -367,11 +367,9 @@ footer {
   background: var(--color-darkblue);
   color: var(--color-primary);
   padding: 2rem 3rem 2rem 3rem;
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin-top: auto;
   max-width: 1920px;
-  bottom: 0;
 }
 
 #footerSection {
@@ -414,13 +412,25 @@ footer {
 }
 .footer-links {
   padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .some-logo {
-filter: invert(100%);
+display: block;
+width: 50px;
+height: 50px;
+filter: saturate(0.5);
+}
+.some-logo:hover {
+  filter: saturate(1);
 }
 .footer-links h5 {
   font-weight: 500;
 }
+
 /* ?Footer ends here */
 
 @media (prefers-color-scheme: dark) {

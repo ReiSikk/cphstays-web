@@ -22,7 +22,7 @@ function BurgerMenu() {
     <nav id='burgerMenu'>
           <div className="nav-left">
           <Link href="/">
-           <Image src="/cphstays-logo.svg" alt="cphstays logo"  width={100} height={100} className="logo-img" />
+           <Image src="/images/cphstays-logo.svg" alt="cphstays logo"  width={100} height={100} className="logo-img" />
            </Link>
          </div>
     <div id="menuToggle">

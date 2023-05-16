@@ -45,17 +45,19 @@ function Footer() {
         </div>
         </div>
         <div className="footer-links">
+          <div className="footer-left">
           <h5>Social</h5>
         <p className="copyright">Copyright ManageMyAir 2023 ©</p>
+          </div>
         <div className="footer-some">
         <Link href="https://www.facebook.com/Managemyair/">
-          <Image src="/images/facebook-logo.svg" alt="facebook logo" width={28} height={28} className="some-logo" />
+          <Image src="/images/icons8-facebook.svg" alt="facebook logo" width={28} height={28} className="some-logo" />
         </Link>
         <Link href="https://www.instagram.com/managemyair/?hl=en">
-          <Image src="/images/instagram-logo.svg" alt="instagram logo" width={28} height={28} className="some-logo" />
+          <Image src="/images/icons8-instagram.svg" alt="instagram logo" width={28} height={28} className="some-logo" />
         </Link>
         <Link href="https://www.linkedin.com/company/managemyair/about/">
-          <Image src="/images/linkedin-logo.svg" alt="linkedin logo" width={28} height={28} className="some-logo" />
+          <Image src="/images/icons8-linkedin.svg" alt="linkedin logo" width={28} height={28} className="some-logo" />
         </Link>
         </div>
 
