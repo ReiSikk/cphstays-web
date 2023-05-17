@@ -1,20 +1,79 @@
-import Link from 'next/link'
-import React from 'react'
-import Image from 'next/image'
+import Link from "next/link";
+import React from "react";
+import Image from "next/image";
 
 function ApartmentCard() {
   return (
     <>
-    {/* Just start writing HTML down below as you usually do and remember the html in the "return" parenthesis must have one parent element. In react it's easiest to just add these empty "fragments" which are these "<> </>" */}
+      <div className="card">
+        <div className="card_image">
+          {" "}
+          <Image
+            src="/images/apt_example.jpg"
+            alt="apartment"
+            width={240}
+            height={150}
+            className="the_card_image"
+          />
+        </div>
 
-    {/* This is how links look in React ==> */}
-   <Link href="/apartments">Link to apartment</Link> 
-
-   {/* This is how image tags look ==> */}
-   <Image src="/images/imagehere" alt="apartment" width={200} height={200} className="card-image" />
-    <div>ApartmentCard</div>
+        <div className="card_content">
+          <p className="apartment_descrpiton">Spacious central apartment</p>
+          <div className="address">
+            {" "}
+            <Image
+              src="/images/location.svg"
+              alt="icon_1"
+              width={20}
+              height={20}
+              className="card-icon"
+            />
+            <p className="card_p">Sønder Blvd. 24, Kbh V</p>
+          </div>
+          <div className="sqm2">
+            {" "}
+            <Image
+              src="/images/sqm.svg"
+              alt="icon_1"
+              width={20}
+              height={20}
+              className="card-icon"
+            />
+            <p className="card_p">162m2</p>
+          </div>
+          <div className="bedrooms">
+            {" "}
+            <Image
+              src="/images/bed.svg"
+              alt="icon_1"
+              width={20}
+              height={20}
+              className="card-icon"
+            />
+            <p className="card_p">3 bedrooms</p>
+          </div>
+          <div className="cpr">
+            {" "}
+            <p className="cpr_p">CPR</p>
+            <p className="card_p">Available</p>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
+/* 
+        <div className="card_button">
+          {" "}
+          <Link href="/apartments">
+            <Image
+              src="/images/arrow_button.svg"
+              alt="arrow"
+              width={33.37}
+              height={32}
+              className="the_arrow"
+            />
+          </Link>
+        </div>*/
 
-export default ApartmentCard
+export default ApartmentCard;
