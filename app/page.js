@@ -24,6 +24,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className='benefits'>
+        <div className='benefits-container'>
+          <div className='benefits-left'>
+            <Image src='/images/benefits-bg.webp' alt='benefits image' width={1200} height={800} className="benefits-img" />
+            <ul className='benefits-list'>
+              <li><span className='benefits-icon'></span>Lorem ipsum dolor sit amet, consect.</li>
+              <li><span className='benefits-icon'></span>Lorem ipsum dolor sit amet, consect.</li>
+              <li><span className='benefits-icon'></span>Lorem ipsum dolor sit amet, consect.</li>
+            </ul>
+          </div>
+          <div className='benefits-right'>
+           <p>Lorem ipsum</p>
+           <h3>Corporate housing benefits </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            </p>
+          </div>
+
+
+        </div>
+      </section>
     </main>
     <Footer />
     </>
