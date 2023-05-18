@@ -442,13 +442,14 @@ footer {
 /* ?Footer ends here */
 
 
-/* ? Landing page starts here */
+/* ? Corporate housing starts here */
 .hero-img {
   object-fit: cover;
   width: 100%;
   max-width: 1920px;
   max-height: 66vh;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -525,6 +526,7 @@ footer {
   width: 100%;
   max-width: 899px;
 }
+
 /* .benefits-list {
   position: absolute;
   margin-top: -15rem;
@@ -536,11 +538,21 @@ footer {
 .benefits-list li {
   background: #fff;
   border-radius: 50px;
+  width: -moz-fit-content;
   width: fit-content;
   min-width: 100px;
   padding: 1rem 1.5rem;
   margin-top: 1rem;
-
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.benefits-icon {
+  width: 100%;
+  min-height: 24px;
+  min-width: 24px;
+  max-width: 64px;
+  max-height: 64px;
 }
 .benefits-list {
   position: relative;
@@ -566,6 +578,10 @@ footer {
     flex-direction: row !important;
     gap: 2rem !important;
   }
+  .hdiw-section {
+    flex-direction: row !important;
+    gap: 2rem !important;
+  }
 }
 .benefits-img {
   width: 100%;
@@ -588,7 +604,89 @@ footer {
     gap: 2rem;
 }
 
-/* ? Landing page ends here */
+.hdiw-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  margin: 5rem 0rem;
+}
+
+.hdiw-left {
+  width: 100%;
+  max-width: 899px;
+}
+
+
+label {
+  font-weight: bold;
+}
+.small-label {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1.25px;
+  display: block;
+}
+
+.steps-list {
+  list-style: none;
+  padding-top: 1rem;
+  background: var(--color-background);
+  color: var(--color-body-text);
+  padding: 1.5rem 1rem 1rem 1rem;
+  max-width: 899px;
+  margin-top: 1rem;
+  border-radius: 24px;
+}
+
+.step {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 16px;
+}
+.step-content h5 {
+  padding-bottom: 0.25rem;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-content h5 {
+  margin: 0;
+}
+
+.step-content p {
+  margin: 0;
+}
+
+.hdiw-img {
+object-fit: cover;
+width: 100%;
+height: auto;
+max-width: 932px;
+max-height: 699px ;
+}
+
+.step-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* ? Corporate housing page ends here */
 
 /* ? Apartment card starts here */
 .card {
