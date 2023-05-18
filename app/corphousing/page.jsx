@@ -1,10 +1,11 @@
-
+"use client"
 import React from 'react'
 import Footer from '../components/Footer'
 import NavigationBar from '../components/NavigationBar'
 import Image from 'next/image'
 import Link from 'next/link'
 import HDIWsection from '../components/HDIWsection'
+import Carousel from '../components/ApartmentsCarousel'
 
 function page() {
   return (
@@ -41,6 +42,7 @@ function page() {
         </div>
       </section>
       <HDIWsection />
+      <Carousel />
     </>
   )
 }
