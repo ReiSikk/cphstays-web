@@ -5,6 +5,7 @@ import NavigationBar from '../components/NavigationBar'
 import Image from 'next/image'
 import Link from 'next/link'
 import HDIWsection from '../components/HDIWsection'
+import Testimonials from '../components/Testimonials'
 
 function page() {
   return (
@@ -41,6 +42,7 @@ function page() {
         </div>
       </section>
       <HDIWsection />
+      <Testimonials /> 
     </>
   )
 }
