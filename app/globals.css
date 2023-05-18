@@ -64,7 +64,7 @@ a:hover {
   scale: 1;
 }
 p {
-  font-family: var(--font-p);
+  font-family: var(--font-poppins);
   font-weight: 400;
 }
 h1,
@@ -688,15 +688,79 @@ max-height: 699px ;
 
 /* ? Corporate housing page ends here */
 
+/* ? Testimonials comp starts here */
+
+.testimonials-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+.testimonials-wrapper {
+  margin: 5rem 0rem;
+}
+
+
+@media (min-width: 300px) {
+  .testimonials-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.column {
+  flex: 1;
+  background-color: #fafafa;
+  border-radius: 20px;
+}
+.testimonial-card {
+  padding: 1rem 1.5rem;
+  background: var(--color-primary);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: 0.3s all ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.testimonial-card p {
+  text-align: center;
+  margin: 10px 0 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.testimonial-icon {
+  width: fit-content;
+  min-width: 24px;
+  max-width: 64px;
+  height: auto;
+  object-fit: cover;
+
+}
+
+h4 {
+  margin: 0;
+}
+
+
+
+/* ? Testimonials comp ends here */
+
 /* ? Apartment card starts here */
 .card {
-  width: 235px;
+  width: 100%;
   height: auto;
-  background: #fafafb;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  /*border: solid 1px #fafafb;*/
+  background: #fafafa;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  transition: 0.4s ease;
+  transition: 0.3s all ease;
   position: relative;
 }
 .card_button {
