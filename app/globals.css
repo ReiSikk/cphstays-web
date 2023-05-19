@@ -726,9 +726,16 @@ max-height: 699px ;
   grid-gap: 1rem;
   margin-top: 1rem;
 }
+
 .testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
   margin: 5rem 0rem;
 }
+
 
 
 @media (min-width: 300px) {
@@ -782,6 +789,116 @@ h4 {
 
 
 /* ? Testimonials comp ends here */
+
+/* ? Testimonials carousel card comp starts here */
+.user-testimonials-wrapper {
+  width: 100%;
+  margin: 5rem 0rem;
+}
+.user-testimonials-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 300px) {
+  .user-testimonials-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.testimonial-quote {
+  font-style: italic;
+}
+.testimonials-carousel > .swiper {
+  margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    background-color: transparent!important;
+}
+.carousel-card {
+  width: fit-content;
+  max-width: 450px;
+  min-width: 250px;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+/*  */
+.container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+}
+.card .image-box {
+  height: 200px;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}
+/* ? Testimonials carousel card comp ends here */
 
 
 /* ? Apartment card starts here */
