@@ -7,6 +7,7 @@ import Link from 'next/link'
 import HDIWsection from '../components/HDIWsection'
 import Carousel from '../components/ApartmentsCarousel'
 import Testimonials from '../components/Testimonials'
+import TestimonialsCarousel from '../components/TestimonialsSection'
 import ContactForm from '../components/ContactForm'
 
 function page() {
@@ -46,6 +47,8 @@ function page() {
       <HDIWsection />
       <Carousel />
       <Testimonials /> 
+      <TestimonialsCarousel />
+
       <ContactForm />
 
     </>
