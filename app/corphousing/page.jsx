@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HDIWsection from '../components/HDIWsection'
 import Carousel from '../components/ApartmentsCarousel'
+import Testimonials from '../components/Testimonials'
 
 function page() {
   return (
@@ -43,6 +44,8 @@ function page() {
       </section>
       <HDIWsection />
       <Carousel />
+      <Testimonials /> 
+
     </>
   )
 }
