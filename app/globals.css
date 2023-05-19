@@ -604,6 +604,7 @@ footer {
     gap: 2rem;
 }
 
+/* How does it work component */
 .hdiw-section {
   background-color: #fff;
   display: flex;
@@ -685,8 +686,37 @@ max-height: 699px ;
   gap: 0.5rem;
   align-items: center;
 }
+/* how does it work comp ends */
 
 /* ? Corporate housing page ends here */
+
+/* ? Apartments carousel starts here */
+.swiper-wrapper {
+  padding: 1rem 3rem 2.5rem 3rem;
+}
+.swiper {
+  background-color: var(--color-primary) !important;
+  width: 100%;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin: 5rem 0rem;
+}
+.swiper-button-prev, .swiper-button-next {
+  color: var(--color-darkblue)!important;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  opacity: 1;
+}
+.swiper-button-prev:active, .swiper-button-next:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--color-accent-blue)!important;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-darkblue) !important;
+}
+/* ? Apartments carousel ends here */
 
 /* ? Testimonials comp starts here */
 
@@ -752,6 +782,7 @@ h4 {
 
 
 /* ? Testimonials comp ends here */
+
 
 /* ? Apartment card starts here */
 .card {
