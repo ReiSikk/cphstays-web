@@ -66,6 +66,7 @@ a:hover {
 p {
   font-family: var(--font-poppins);
   font-weight: 400;
+  max-width: 66ch;
 }
 h1,
 h2,
@@ -115,6 +116,7 @@ h5 {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
+  max-width: 450px;
   line-height: 18px;
   color: var(--color-darkblue);
   border-radius: 30px;
