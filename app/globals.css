@@ -112,12 +112,12 @@ h5 {
   padding: 1rem 2rem;
   background-color: var(--color-accent-blue);
   font-family: var(--font-headings);
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 18px;
-color: var(--color-darkblue);
-border-radius: 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-darkblue);
+  border-radius: 30px;
 }
 .secondary-btn {
   transition: all 0.3s ease;
@@ -127,12 +127,12 @@ border-radius: 30px;
   padding: 1rem 2rem;
   background-color: var(--color-darkblue);
   font-family: var(--font-headings);
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 18px;
-color: var(--color-accent-blue);
-border-radius: 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-accent-blue);
+  border-radius: 30px;
 }
 .secondary-btn:hover {
   background-color: var(--color-accent-blue);
@@ -333,20 +333,20 @@ border-radius: 30px;
   margin-top: 4px;
 }
 nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 3rem;
-position: fixed;
-z-index: 100;
-margin-left: auto;
-margin-right: auto;
-top: 0;
-left: 0;
-right: 0;
-height: 5rem;
-background: #020426;
-max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: fixed;
+  z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: #020426;
+  max-width: 1920px;
 }
 nav .primary-btn {
   margin-left: 0.5rem;
@@ -441,7 +441,6 @@ footer {
 
 /* ?Footer ends here */
 
-
 /* ? Corporate housing starts here */
 .hero-img {
   object-fit: cover;
@@ -494,21 +493,22 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap:3rem;
+  gap: 3rem;
 }
 
 /* location select comp */
 .css-1agwao2-MuiFormControl-root {
   min-width: 105px;
 }
-#location, #price  {
+#location,
+#price {
   display: block;
   min-height: 2.5rem;
   max-height: 3rem;
   padding: 1rem;
 }
 
-@media only screen and (min-width:599px) {
+@media only screen and (min-width: 599px) {
   .hero-cta-container {
     justify-content: flex-end;
   }
@@ -567,13 +567,13 @@ footer {
   height: -moz-fit-content;
   height: fit-content;
 }
-@media only screen and (min-width:599px) {
+@media only screen and (min-width: 599px) {
   .benefits-list {
     margin-left: 4rem;
     margin-right: auto;
   }
 }
-@media only screen and (min-width:899px) {
+@media only screen and (min-width: 899px) {
   .benefits-container {
     flex-direction: row !important;
     gap: 2rem !important;
@@ -600,8 +600,8 @@ footer {
 }
 .benefits-container {
   display: flex;
-    flex-direction: column-reverse;
-    gap: 2rem;
+  flex-direction: column-reverse;
+  gap: 2rem;
 }
 
 /* How does it work component */
@@ -620,7 +620,6 @@ footer {
   width: 100%;
   max-width: 899px;
 }
-
 
 label {
   font-weight: bold;
@@ -673,11 +672,11 @@ label {
 }
 
 .hdiw-img {
-object-fit: cover;
-width: 100%;
-height: auto;
-max-width: 932px;
-max-height: 699px ;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 932px;
+  max-height: 699px;
 }
 
 .step-icons {
@@ -701,17 +700,20 @@ max-height: 699px ;
   border-radius: 8px;
   margin: 5rem 0rem;
 }
-.swiper-button-prev, .swiper-button-next {
-  color: var(--color-darkblue)!important;
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-darkblue) !important;
   transition: all 0.2s ease;
   opacity: 0.6;
 }
-.swiper-button-prev:hover, .swiper-button-next:hover {
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
   opacity: 1;
 }
-.swiper-button-prev:active, .swiper-button-next:active {
+.swiper-button-prev:active,
+.swiper-button-next:active {
   background-color: rgba(0, 0, 0, 0.1);
-  color: var(--color-accent-blue)!important;
+  color: var(--color-accent-blue) !important;
 }
 .swiper-pagination-bullet-active {
   background: var(--color-darkblue) !important;
@@ -734,8 +736,6 @@ max-height: 699px ;
   width: 100%;
   margin: 5rem 0rem;
 }
-
-
 
 @media (min-width: 300px) {
   .testimonials-section {
@@ -778,14 +778,11 @@ max-height: 699px ;
   max-width: 64px;
   height: auto;
   object-fit: cover;
-
 }
 
 h4 {
   margin: 0;
 }
-
-
 
 /* ? Testimonials comp ends here */
 
@@ -1002,9 +999,10 @@ input:-internal-autofill-selected {
 
 
 
+
 /* ? Apartment card starts here */
 .card {
-  width: 100%;
+  width: 250px;
   height: auto;
   background: #fafafa;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
@@ -1043,40 +1041,70 @@ input:-internal-autofill-selected {
   grid-template-areas:
     "a a"
     "b b"
-    "c d"
-    "e e";
-  gap: 12px;
-  padding: 0.7rem 0.4rem 0.7rem 0.4rem;
+    "c c"
+    "d e";
+  padding: 0.7rem 0.6rem 0.7rem 0.6rem;
+  grid-gap: 12px;
 }
 .address,
 .sqm2,
-.bedrooms,
-.cpr {
-  display: flex;
-  flex-direction: row;
+.bedrooms {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  justify-content: baseline;
 }
 .address {
-  grid-area: b;
-}
-.sqm2 {
   grid-area: c;
 }
-.bedrooms {
+.sqm2 {
   grid-area: d;
 }
-.cpr {
+.bedrooms {
   grid-area: e;
 }
-.cpr_p {
-  font-weight: bolder;
-  margin-right: 0.5rem;
-}
+
 .apartment_descrpiton {
   grid-area: a;
-  font-weight: bold;
+  font-weight: bolder;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.price {
+  grid-area: b;
   padding-bottom: 0.2rem;
 }
 /* ? Apartment card ends here */
+/* About us page starts here */
+.about_list li {
+  background: #fff;
+  border-radius: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.about_list {
+  position: relative;
+  margin-top: -15rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 15vh;
+  max-width: -moz-fit-content;
+  width: 80%;
+  max-width: 650px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+/* About us page ends here */
 
 @media (prefers-color-scheme: dark) {
   html {

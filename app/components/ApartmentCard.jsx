@@ -11,14 +11,15 @@ function ApartmentCard() {
           <Image
             src="/images/apt_example.jpg"
             alt="apartment"
-            width={240}
+            width={250}
             height={150}
             className="the_card_image"
           />
         </div>
 
         <div className="card_content">
-          <p className="apartment_descrpiton">Spacious central apartment</p>
+          <h4 className="apartment_descrpiton">Spacious luxury flat</h4>
+          <p className="price">23000 DKK/month</p>
           <div className="address">
             {" "}
             <Image
@@ -51,12 +52,7 @@ function ApartmentCard() {
               className="card-icon"
             />
             <p className="card_p">3 bedrooms</p>
-          </div>
-          <div className="cpr">
-            {" "}
-            <p className="cpr_p">CPR</p>
-            <p className="card_p">Available</p>
-          </div>
+          </div>{" "}
         </div>
       </div>
     </>
@@ -74,6 +70,11 @@ function ApartmentCard() {
               className="the_arrow"
             />
           </Link>
-        </div>*/
+        </div>
+                  <div className="cpr">
+            {" "}
+            <p className="cpr_p">CPR</p>
+            <p className="card_p">Available</p>
+          </div>*/
 
 export default ApartmentCard;
