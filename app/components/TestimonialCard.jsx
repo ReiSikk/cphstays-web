@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-function TestimonialUserCard(user) {
+function TestimonialCard(user) {
   return (
     <div className="carousel-card">
     <div className="carousel-card-top">
@@ -18,4 +18,4 @@ function TestimonialUserCard(user) {
   )
 }
 
-export default TestimonialUserCard
+export default TestimonialCard

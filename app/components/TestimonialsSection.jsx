@@ -1,18 +1,13 @@
 
 import React, { useRef, useState } from "react";
 import Image from 'next/image'
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Pagination, Navigation } from "swiper";
 
 
-import TestimonialUserCard from "./TestimonialsUserCard";
 
-function TestimonialsCarousel() {
+
+import TestimonialCard from "./TestimonialCard";
+
+function TestimonialsSection() {
     const data = [
         {
             id: 1,
@@ -55,7 +50,7 @@ function TestimonialsCarousel() {
     <h3>Corporate clients</h3>
     <div className="user-testimonials-section">
 {data.map(user => (
-    <TestimonialUserCard key={user.id} user={user} className="testimonial-card"/>
+    <TestimonialCard key={user.id} user={user} className="testimonial-card"/>
 ))}
 </div>
     </section>
@@ -63,4 +58,4 @@ function TestimonialsCarousel() {
   )
 }
 
-export default TestimonialsCarousel
+export default TestimonialsSection
