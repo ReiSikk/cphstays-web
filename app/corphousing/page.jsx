@@ -1,12 +1,15 @@
-"use client";
-import React from "react";
-import Footer from "../components/Footer";
-import NavigationBar from "../components/NavigationBar";
-import Image from "next/image";
-import Link from "next/link";
-import HDIWsection from "../components/HDIWsection";
-import Carousel from "../components/ApartmentsCarousel";
-import Testimonials from "../components/Testimonials";
+
+"use client"
+import React from 'react'
+import Footer from '../components/Footer'
+import NavigationBar from '../components/NavigationBar'
+import Image from 'next/image'
+import Link from 'next/link'
+import HDIWsection from '../components/HDIWsection'
+import Carousel from '../components/ApartmentsCarousel'
+import Testimonials from '../components/Testimonials'
+import TestimonialsCarousel from '../components/TestimonialsSection'
+import ContactForm from '../components/ContactForm'
 
 function page() {
   return (
@@ -93,7 +96,10 @@ function page() {
       </section>
       <HDIWsection />
       <Carousel />
-      <Testimonials />
+      <Testimonials /> 
+      <TestimonialsCarousel />
+
+      <ContactForm />
     </>
   );
 }
