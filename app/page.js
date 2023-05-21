@@ -36,7 +36,61 @@ export default function Home() {
       </div>
     </section>
       </header> 
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+      <section className='testimonials-wrapper'>
+<span className='small-label'>Lorem ipsum</span>
+    <h3>Services we offer</h3>
+    <div className="testimonials-section">
+    <div class={styles.landingpage_card}>
+      <div className={styles.card_link_wrapper}>
+        <Image src='/images/star.svg'  width={28} height={28} alt='star' />
+        <Link href="/apartments" className={styles.card_link}>
+          <span>Read more</span>
+          <span>
+            <Image src='/images/arrow-right.svg'  width={28} height={28} alt='right arrow' />
+            </span>
+        </Link>
+      </div>
+      <div className={styles.card_content}>
+      <h4>Title 1</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+    </div>
+    <div class={styles.landingpage_card}>
+      <div className={styles.card_link_wrapper}>
+        <Image src='/images/star.svg'  width={28} height={28} alt='star' />
+        <Link href="/apartments" className={styles.card_link}>
+          <span>Read more</span>
+          <span>
+            <Image src='/images/arrow-right-black.svg'  width={28} height={28} alt='right arrow' />
+            </span>
+        </Link>
+      </div>
+      <div className={styles.card_content}>
+      <h4>Title 1</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+    </div>
+    <div class={styles.landingpage_card}>
+      <div className={styles.card_link_wrapper}>
+        <Image src='/images/star.svg'  width={28} height={28} alt='star' />
+        <Link href="/apartments" className={styles.card_link}>
+          <span>Read more</span>
+          <span>
+            <Image src='/images/arrow-right-black.svg'  width={28} height={28} alt='right arrow' />
+            </span>
+        </Link>
+      </div>
+      <div className={styles.card_content}>
+      <h4>Title 1</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </div>
+    </div>
+   
+    </div>
+    </section>
+
+      </main>
     <Footer />
     
     </>
