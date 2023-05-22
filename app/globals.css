@@ -612,6 +612,7 @@ footer {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   padding: 2rem 3rem;
   border-radius: 8px;
@@ -678,7 +679,7 @@ label {
   width: 100%;
   height: auto;
   max-width: 932px;
-  max-height: 699px;
+  max-height: 700px;
 }
 
 .step-icons {

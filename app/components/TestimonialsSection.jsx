@@ -47,7 +47,7 @@ function TestimonialsSection() {
     <>
     <section className="user-testimonials-wrapper">
 <span className='small-label'>Lorem ipsum</span>
-    <h3>Corporate clients</h3>
+    <h3>What our guests say</h3>
     <div className="user-testimonials-section">
 {data.map(user => (
     <TestimonialCard key={user.id} user={user} className="testimonial-card"/>

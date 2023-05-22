@@ -5,16 +5,21 @@ import NavigationBar from './components/NavigationBar'
 import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
+import HDIWsection from './components/HDIWsection'
+import ApartmentsCarousel from './components/ApartmentsCarousel'
+import TestimonialsSection from './components/TestimonialsSection'
 
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
+
+  /* Gets rid of the Hydration error */
+/*   const [mounted, setMounted] = useState(false);
   useEffect(() => {
       setMounted(true)
   }, [])
   
-  if (!mounted) return null; 
-   
+  if (!mounted) return null;  */
+
   return (
     <>
     <header className={styles.header}>
@@ -96,6 +101,9 @@ export default function Home() {
    
     </div>
     </section>
+    <HDIWsection  />
+    <ApartmentsCarousel />
+    <TestimonialsSection />
 
       </main>
     <Footer />
