@@ -63,7 +63,7 @@ a:hover {
 .no-scale:hover {
   scale: 1;
 }
-p {
+p,li {
   font-family: var(--font-poppins);
   font-weight: 400;
   max-width: 66ch;
@@ -88,6 +88,11 @@ h3 {
 }
 h4 {
   font-size: 1.563rem;
+}
+.h5-style {
+  font-weight: 500;
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
 }
 h5 {
   font-size: 1.25rem;
@@ -1108,6 +1113,32 @@ input:-internal-autofill-selected {
   height: fit-content;
 }
 /* About us page ends here */
+
+/* ? FAQ Comp starts here */
+summary {
+  padding: 1rem;
+}
+details {
+  padding-bottom: 1rem;
+}
+details > summary::marker {
+  margin-right: 1rem !important;
+}
+details > p, details ul li {
+  padding:1rem;
+}
+.faq-section {
+  margin: 3rem 0rem;
+}
+.css-ahj2mt-MuiTypography-root {
+  font-family: var(--font-headings) !important;
+  font-weight: 600;
+}
+.css-15v22id-MuiAccordionDetails-root > p {
+  font-family: var(--font-poppins);
+  font-weight: 400;
+}
+/* ? FAQ Comp ends here */
 
 @media (prefers-color-scheme: dark) {
   html {

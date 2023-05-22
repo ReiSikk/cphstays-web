@@ -8,6 +8,8 @@ import Link from 'next/link'
 import HDIWsection from './components/HDIWsection'
 import ApartmentsCarousel from './components/ApartmentsCarousel'
 import TestimonialsSection from './components/TestimonialsSection'
+import SimpleAccordion from './components/FaqAccordion'
+import FaqAccordion from './components/FaqAccordion'
 
 
 export default function Home() {
@@ -104,6 +106,7 @@ export default function Home() {
     <HDIWsection  />
     <ApartmentsCarousel />
     <TestimonialsSection />
+    <FaqAccordion />
 
       </main>
     <Footer />
