@@ -1156,6 +1156,9 @@ details > p, details ul li {
   border-top-right-radius: 8px;
 }
 /* ? FAQ Comp ends here */
+.carousel-container {
+  max-width: 750px;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
