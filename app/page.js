@@ -1,14 +1,13 @@
 "use client"
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Footer from './components/Footer'
 import NavigationBar from './components/NavigationBar'
-import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import HDIWsection from './components/HDIWsection'
 import ApartmentsCarousel from './components/ApartmentsCarousel'
 import TestimonialsSection from './components/TestimonialsSection'
-import SimpleAccordion from './components/FaqAccordion'
 import FaqAccordion from './components/FaqAccordion'
 import ContactForm from './components/ContactForm'
 
@@ -16,12 +15,12 @@ import ContactForm from './components/ContactForm'
 export default function Home() {
 
   /* Gets rid of the Hydration error */
-/*   const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
       setMounted(true)
   }, [])
   
-  if (!mounted) return null;  */
+  if (!mounted) return null; 
 
   return (
     <>
