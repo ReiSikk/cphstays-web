@@ -20,7 +20,7 @@ function BurgerMenu() {
 
   return (
     <>
-    <nav id='burgerMenu'>
+    <div id='burgerMenu'>
           <div className="nav-left">
           <Link href="/">
            <Image src="/images/cphstays-logo.svg" alt="cphstays logo"  width={100} height={100} className="logo-img" />
@@ -33,6 +33,7 @@ function BurgerMenu() {
       <span></span>
       <ul id="menu">
         <Link href="/"><li>Home</li></Link>
+        <Link href="/corphousing"><li>Corporate housing</li></Link>
         <Link href="/apartments"><li>Apartments</li></Link>
         <Link href="/landlords"><li>For landlords</li></Link>
         <Link href="/about"><li>About</li></Link>
@@ -41,7 +42,7 @@ function BurgerMenu() {
     </div>
 
     <div className={`menu-overlay ${isMenuOpen ? "open" : ""}`} ></div>
-  </nav>
+  </div>
   </>
   )
 }

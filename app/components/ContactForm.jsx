@@ -13,6 +13,7 @@ function ContactForm() {
     }
     return (
         <form className='contact-form' onSubmit={handleSubmit}>
+          <h3>Send us a message</h3>
     <div className="form-input">
                <label htmlFor="name">
                  Full name
