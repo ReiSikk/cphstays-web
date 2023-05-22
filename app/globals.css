@@ -917,6 +917,15 @@ h4 {
   background-color: #fff;
   border-radius: 8px;
 }
+@media only screen and (min-width:899px) {
+  .contact-form {
+    min-width: 0;
+  }
+  .faq-section {
+    margin-bottom: auto !important;
+    margin-top: 0 !important;
+  }
+}
 .success-modal {
   display: flex;
   flex-direction: column;

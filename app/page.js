@@ -10,6 +10,7 @@ import ApartmentsCarousel from './components/ApartmentsCarousel'
 import TestimonialsSection from './components/TestimonialsSection'
 import SimpleAccordion from './components/FaqAccordion'
 import FaqAccordion from './components/FaqAccordion'
+import ContactForm from './components/ContactForm'
 
 
 export default function Home() {
@@ -106,7 +107,10 @@ export default function Home() {
     <HDIWsection  />
     <ApartmentsCarousel />
     <TestimonialsSection />
+    <section className={styles.faq_and_contact}>
     <FaqAccordion />
+    <ContactForm />
+    </section>
 
       </main>
     <Footer />
