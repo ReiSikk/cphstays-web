@@ -2,12 +2,19 @@
 import Image from 'next/image'
 import Footer from './components/Footer'
 import NavigationBar from './components/NavigationBar'
-import SelectAutoWidth from './components/SelectAutoWidth'
-import BasicTextFields from './components/BasicTextFields'
+import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 
+
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+      setMounted(true)
+  }, [])
+  
+  if (!mounted) return null; 
+   
   return (
     <>
     <header className={styles.header}>
@@ -41,7 +48,7 @@ export default function Home() {
 <span className='small-label'>Lorem ipsum</span>
     <h3>Services we offer</h3>
     <div className="testimonials-section">
-    <div class={styles.landingpage_card}>
+    <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star.svg'  width={28} height={28} alt='star' />
         <Link href="/apartments" className={styles.card_link}>
@@ -56,7 +63,7 @@ export default function Home() {
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
       </div>
     </div>
-    <div class={styles.landingpage_card}>
+    <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star-darkblue.svg'  width={28} height={28} alt='star' />
         <Link href="/apartments" className={styles.card_link}>
@@ -71,7 +78,7 @@ export default function Home() {
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
       </div>
     </div>
-    <div class={styles.landingpage_card}>
+    <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star-darkblue.svg'  width={28} height={28} alt='star' />
         <Link href="/apartments" className={styles.card_link}>
