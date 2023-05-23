@@ -1,16 +1,25 @@
 import React from 'react'
 import ApartmentCard from './ApartmentCard'
 
-function ApartmentsList(props) {
-    console.log(props, "props");
-  return (
-    <section className="apt-grid-wrapper">
-         {props.filteredList.map((apartment) => {
-          return apartment.rooms != "0" ?
-           <ApartmentCard rooms={apartment.rooms} location={apartment.location} key={apartment.id} /> : null;
+function ApartmentList (props) {
+  
+     
+    return (
+        <>
+      <div>
+        <h1>Available Apartments</h1>
+        {props.filteredApartments.map( apartment => {
+          return apartment ? <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location}  /> : null;
         })}
-    </section>
-  )
-}
 
-export default ApartmentsList
+        {/* this below kinda worked */}
+       {/*  {filteredApartments.map(apartment => (
+          <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location}/>
+
+        ))} */}
+      </div>
+      </>
+    );
+  };
+
+export default ApartmentList

@@ -3,9 +3,80 @@ import React from "react";
 import ApartmentCard from "../components/ApartmentCard";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ApartmentsList from "../components/ApartmentsList";
 import Filters from "../components/Filters";
 
-function page() {
+function Page() {
+
+    //set state for rooms
+    const [rooms, setRooms] = React.useState('');
+    console.log(rooms);
+  
+    const handleRooms = (event, SelectChangeEvent) => {
+        setRooms(event.target.value);
+    };
+
+    //set state for location
+    const [location, setLocation] = React.useState('');
+    console.log(location);
+  
+    const handleLocation = (event, SelectChangeEvent) => {
+      setLocation(event.target.value);
+    };
+
+    const [filter, setFilter] = useState({
+        location: "all",
+        rooms: "any",
+      });
+
+      const allApartments = [
+        { 
+            id: 1,
+            location: 'Østerbro',
+            rooms: '3',
+            available: true,
+        },
+        { 
+            id: 2,
+            location: 'Nørrebro',
+            rooms: '4',
+            available: true,
+
+        },
+        { 
+            id: 3,
+            location: 'Vesterbro',
+            rooms: '2',
+            available: false,
+
+        },
+        { 
+            id: 4,
+            location: 'Vesterbro',
+            rooms: '5',
+            available: true,
+
+        },
+    ]
+
+    const filteredList = allApartments.map((apartment) => {
+      if (location === 'all' && rooms === 'all') {
+        const filteredApartments = allApartments.filter(apartment => apartment.available);
+        return apartment;
+      } else if (location === 'all' && rooms === apartment.rooms) {
+        return apartment;
+      } else if (location === apartment.location && rooms === 'all') {
+        return apartment;
+      } else if (location === apartment.location && rooms === apartment.rooms) {
+        return apartment;
+      }
+    });
+
+    const filteredApartments = allApartments.filter(apartment => apartment.available);
+  
+    console.log(filteredList, "filteredList");
+
 
   return (
     <>
@@ -77,8 +148,9 @@ function page() {
     <h2>Browse our apartments</h2>
   </div>
   <Filters />
+  <ApartmentsList filteredList={filteredList} allApartments={allApartments} filteredApartments={filteredApartments}/>
     </>
   );
 }
 
-export default page;
+export default Page;
