@@ -698,34 +698,23 @@ label {
 /* ? Corporate housing page ends here */
 
 /* ? Apartments carousel starts here */
-.swiper-wrapper {
-  padding: 1rem 3rem 2.5rem 3rem;
+.carousel-container {
+  max-width: 750px;
 }
-.swiper {
-  background-color: var(--color-primary) !important;
+.carousel-status {
+  display: none;
+}
+.carousel .slide img {
   width: 100%;
-  padding: 3rem 2rem;
-  border-radius: 8px;
-  margin: 5rem 0rem;
+  height: auto;
+  vertical-align: top;
+  border: 0;
+  object-fit: cover;
 }
-.swiper-button-prev,
-.swiper-button-next {
-  color: var(--color-darkblue) !important;
-  transition: all 0.2s ease;
-  opacity: 0.6;
+.carousel-card > .card {
+  width: 100%;
 }
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  opacity: 1;
-}
-.swiper-button-prev:active,
-.swiper-button-next:active {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--color-accent-blue) !important;
-}
-.swiper-pagination-bullet-active {
-  background: var(--color-darkblue) !important;
-}
+
 /* ? Apartments carousel ends here */
 
 /* ? Testimonials comp starts here */
@@ -1019,13 +1008,18 @@ input:-internal-autofill-selected {
 
 /* ? Apartment card starts here */
 .card {
-  width: 250px;
+  width: 100%;
+  max-width: 450px;
   height: auto;
   background: #fafafa;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   transition: 0.3s all ease;
   position: relative;
+}
+.address > img, .sqm2 > img, .bedrooms > img {
+  max-width: 36px;
+  height: auto;
 }
 .card_button {
   width: 55px;
@@ -1044,9 +1038,7 @@ input:-internal-autofill-selected {
   padding: 4px 3px 0px 0px;
 }
 
-.card:hover {
-  transform: scale(1.02);
-}
+
 .the_card_image {
   max-width: 100%;
   max-height: 100%;
@@ -1060,7 +1052,8 @@ input:-internal-autofill-selected {
     "b b"
     "c c"
     "d e";
-  padding: 0.7rem 0.6rem 0.7rem 0.6rem;
+  padding: 1.5rem 1rem;
+  text-align: left;
   grid-gap: 12px;
 }
 .address,
@@ -1137,7 +1130,7 @@ details > p, details ul li {
   padding:1rem;
 }
 .faq-section {
-  margin: 3rem 0rem;
+  margin: 0rem 0rem 3rem 0rem;
 }
 .css-ahj2mt-MuiTypography-root {
   font-family: var(--font-headings) !important;
@@ -1156,9 +1149,7 @@ details > p, details ul li {
   border-top-right-radius: 8px;
 }
 /* ? FAQ Comp ends here */
-.carousel-container {
-  max-width: 750px;
-}
+
 
 @media (prefers-color-scheme: dark) {
   html {

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import Image from "next/image";
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; */
 import ApartmentCard from "./ApartmentCard";
 
 
-const imageData = [
+/* const imageData = [
   {
     label: "Image 1",
     alt: "image1",
@@ -48,4 +48,80 @@ export default function ImageCarousel() {
                 </Carousel>
         </div>
     );
-}
+} */
+
+
+import Image from 'next/image';
+import React, { useRef, useEffect, useState } from 'react';
+//import the carousel css file into the component
+import '../carousel.css';
+
+const Carousel = ({ images }) => {
+  const carouselRef = useRef(null);
+  const [visibleItems, setVisibleItems] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const calculateVisibleItems = () => {
+      const viewportWidth = window.innerWidth;
+      const itemWidth = carouselRef.current?.offsetWidth || 0;
+      const visibleItems = Math.floor(viewportWidth / itemWidth);
+      return visibleItems;
+    };
+
+    const handleResize = () => {
+      setVisibleItems(calculateVisibleItems());
+    };
+
+    const handleNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const handlePrev = () => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
+
+    setVisibleItems(calculateVisibleItems());
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [images]);
+
+  useEffect(() => {
+    setCurrentIndex(0); // Reset currentIndex when images change
+  }, [images]);
+
+  if (images.length === 0) {
+    return null; // Return null if images array is empty
+  }
+
+  const getTransformValue = () => {
+    const itemWidth = carouselRef.current.offsetWidth / visibleItems;
+    return `translateX(-${currentIndex * itemWidth}px)`;
+  };
+
+  return (
+    <div className="carousel">
+      <div className="carousel-container" ref={carouselRef}>
+        {images.map((image, index) => (
+          <div className={`carousel-item ${index === currentIndex ? 'active' : ''}`} key={index}>
+            <Image src={image.src} alt={image.alt} width={400} height={500} />
+          </div>
+        ))}
+      </div>
+      <div className="carousel-controls">
+        <button className="carousel-prev" onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)}>
+          &larr;
+        </button>
+        <button className="carousel-next" onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)}>
+          &rarr;
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;
+

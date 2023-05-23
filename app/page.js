@@ -23,6 +23,15 @@ export default function Home() {
   
   if (!mounted) return null; 
 
+/*   const images = [
+    { src: '/images/apt_example.jpg', alt: 'Image 1' },
+    { src: '/images/apt_example.jpg', alt: 'Image 2' },
+    { src: '/images/apt_example.jpg', alt: 'Image 3' },
+    { src: '/images/apt_example.jpg', alt: 'Image 4' },
+    { src: '/images/apt_example.jpg', alt: 'Image 5' },
+    // Add more images as needed
+  ]; */
+
   return (
     <>
     <header className={styles.header}>
@@ -107,7 +116,7 @@ export default function Home() {
     <HDIWsection  />
     <ApartmentsCarousel />
     <TestimonialsSection />
-    <ImageCarousel />
+   {/*  <ImageCarousel images={images} /> */}
     <section className={styles.faq_and_contact}>
     <FaqAccordion />
     <ContactForm />
