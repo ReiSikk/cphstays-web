@@ -1,9 +1,12 @@
+"use client"
 import React from "react";
 import ApartmentCard from "../components/ApartmentCard";
 import Image from "next/image";
 import Link from "next/link";
+import Filters from "../components/Filters";
 
 function page() {
+
   return (
     <>
         <div className="hero-container">
@@ -69,16 +72,11 @@ function page() {
             </div>
 
   </div>
-      <section className="apt-grid-wrapper">
-      <ApartmentCard />
-      <ApartmentCard />
-      <ApartmentCard />
-      <ApartmentCard />
-      <ApartmentCard />
-      <ApartmentCard />
-      <ApartmentCard />
-      <ApartmentCard />
-      </section>
+  <div className="apt-intro-text">
+    <span className="small-label">Fully serviced apartments</span>
+    <h2>Browse our apartments</h2>
+  </div>
+  <Filters />
     </>
   );
 }

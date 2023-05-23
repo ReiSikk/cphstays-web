@@ -4,12 +4,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-export default function SelectAutoWidth() {
-  const [location, setLocation] = React.useState('');
+export default function SelectLocation(props) {
 
-  const handleChange = (event, SelectChangeEvent) => {
-    setLocation(event.target.value);
-  };
 
   return (
     <div>
@@ -18,8 +14,8 @@ export default function SelectAutoWidth() {
         <Select
           labelId="location"
           id="location-select-autowidth"
-          value={location}
-          onChange={handleChange}
+          value={props.location}
+          onChange={props.handleLocation}
           autoWidth
           label="Location"
         >
