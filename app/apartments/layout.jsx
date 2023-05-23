@@ -5,7 +5,9 @@ import NavigationBar from '../components/NavigationBar'
 function ApartmentsLayout({ children }) {
     return (
         <>
+        <header>
     <NavigationBar />
+        </header>
     <main>
     {children}
     </main>

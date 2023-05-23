@@ -477,6 +477,22 @@ footer {
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 16px 0px;
 }
+.apt-hero-cta {
+  margin-top: -8rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92.5% !important;
+  max-width: 650px;
+}
+#apt-hero-benefits {
+   display: block;
+  position: sticky;
+  width: fit-content; 
+}
+#apt-hero-benefits li {
+width: 100%;
+}
 .search-btn {
   background-color: transparent;
   border: none;
@@ -522,6 +538,10 @@ footer {
   .hero-cta {
     margin-left: 8%;
     margin-right: 0;
+  }
+  .apt-hero-cta {
+    margin-left: auto;
+    margin-right: 8%;
   }
 }
 
@@ -1008,18 +1028,20 @@ input:-internal-autofill-selected {
 
 /* ? Apartment card starts here */
 .card {
-  width: 100%;
+  justify-self: center;
   max-width: 450px;
+  max-height: 550px;
+  width: 100%;
   height: auto;
-  background: #fafafa;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  background: #fafafb;
+  box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
+  /*border: solid 1px #fafafb;*/
   border-radius: 10px;
-  transition: 0.3s all ease;
+  transition:  all 0.3s ease;
   position: relative;
 }
-.address > img, .sqm2 > img, .bedrooms > img {
-  max-width: 36px;
-  height: auto;
+.card:hover {
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.3);
 }
 .card_button {
   width: 55px;
@@ -1038,11 +1060,13 @@ input:-internal-autofill-selected {
   padding: 4px 3px 0px 0px;
 }
 
-
 .the_card_image {
   max-width: 100%;
   max-height: 100%;
-
+  min-height: 225px;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
 .card_content {
@@ -1050,41 +1074,37 @@ input:-internal-autofill-selected {
   grid-template-areas:
     "a a"
     "b b"
-    "c c"
-    "d e";
-  padding: 1.5rem 1rem;
-  text-align: left;
-  grid-gap: 12px;
+    "c d"
+    "e e";
+  gap: 12px;
+  padding: 0.75rem 1rem 1.5rem 1rem;
 }
 .address,
 .sqm2,
-.bedrooms {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  align-items: center;
-  justify-content: baseline;
+.bedrooms,
+.cpr {
+  display: flex;
+  flex-direction: row;
 }
 .address {
-  grid-area: c;
+  grid-area: b;
 }
 .sqm2 {
-  grid-area: d;
+  grid-area: c;
 }
 .bedrooms {
+  grid-area: d;
+}
+.cpr {
   grid-area: e;
 }
-
+.cpr_p {
+  font-weight: bolder;
+  margin-right: 0.5rem;
+}
 .apartment_descrpiton {
   grid-area: a;
-  font-weight: bolder;
-  max-width: 250px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.price {
-  grid-area: b;
+  font-weight: bold;
   padding-bottom: 0.2rem;
 }
 /* ? Apartment card ends here */
@@ -1149,6 +1169,19 @@ details > p, details ul li {
   border-top-right-radius: 8px;
 }
 /* ? FAQ Comp ends here */
+
+/* ? Apartments page starts here */
+
+.apt-grid-wrapper {
+  display: grid;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 2.25rem;
+  column-gap: 2rem;
+}
+/* ? Apartments page ends here */
 
 
 @media (prefers-color-scheme: dark) {
