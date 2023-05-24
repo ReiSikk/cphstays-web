@@ -8,7 +8,7 @@ function ApartmentList (props) {
         <>
       <div>
         <h1>Available Apartments</h1>
-        {props.filteredApartments.map( apartment => {
+        {props.filteredList.map( apartment => {
           return apartment ? <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location}  /> : null;
         })}
 

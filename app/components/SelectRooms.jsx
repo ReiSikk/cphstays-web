@@ -15,19 +15,19 @@ export default function SelectRooms(props) {
           labelId="rooms"
           id="rooms-select-autowidth"
           value={props.rooms}
-          onChange={props.handleRooms}
+          onChange={props.roomsChanged}
           autoWidth
           label="rooms"
         >
           <MenuItem value="all">
             <em>Any</em>
           </MenuItem>
-          <MenuItem value="rooms-1">1</MenuItem>
-          <MenuItem value="rooms-2">2</MenuItem>
-          <MenuItem value="rooms-3">3</MenuItem>
-          <MenuItem value="rooms-4">4</MenuItem>
-          <MenuItem value="rooms-5">5</MenuItem>
-          <MenuItem value="rooms-6">6</MenuItem>
+          <MenuItem value="1">1</MenuItem>
+          <MenuItem value="2">2</MenuItem>
+          <MenuItem value="3">3</MenuItem>
+          <MenuItem value="4">4</MenuItem>
+          <MenuItem value="5">5</MenuItem>
+          <MenuItem value="6">6</MenuItem>
         </Select>
       </FormControl>
     </div>

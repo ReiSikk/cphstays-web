@@ -7,8 +7,8 @@ import ApartmentsList from './ApartmentsList'
 function Filters(props) {
   return (
     <div className="filters-container">
-    <SelectLocation handleLocation={props.handleLocation} location={props.location}/>
-    <SelectRooms handleRooms={props.handleRooms}  rooms={props.rooms}/>
+    <SelectLocation  locationChanged={props.locationChanged}/>
+    <SelectRooms   roomsChanged={props.roomsChanged} />
     </div>
   )
 }

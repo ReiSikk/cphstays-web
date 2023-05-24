@@ -10,25 +10,25 @@ import Filters from "../components/Filters";
 function Page() {
 
     //set state for rooms
-    const [rooms, setRooms] = React.useState('');
-    console.log(rooms);
+  /*   const [rooms, setRooms] = React.useState('');
+    console.log(rooms); */
   
-    const handleRooms = (event, SelectChangeEvent) => {
-        setRooms(event.target.value);
-    };
+   
 
     //set state for location
-    const [location, setLocation] = React.useState('');
-    console.log(location);
+ 
   
-    const handleLocation = (event, SelectChangeEvent) => {
-      setLocation(event.target.value);
-    };
 
     const [filter, setFilter] = useState({
         location: "all",
         rooms: "any",
       });
+      const locationChanged = (e) => {
+        setFilter({ ...filter, location: e.target.value });
+      };
+      const roomsChanged = (e) => {
+        setFilter({ ...filter, rooms: e.target.value });
+      };
 
       const allApartments = [
         { 
@@ -60,21 +60,18 @@ function Page() {
         },
     ]
 
-    const filteredList = allApartments.map((apartment) => {
-      if (location === 'all' && rooms === 'all') {
-        const filteredApartments = allApartments.filter(apartment => apartment.available);
-        return apartment;
-      } else if (location === 'all' && rooms === apartment.rooms) {
-        return apartment;
-      } else if (location === apartment.location && rooms === 'all') {
-        return apartment;
-      } else if (location === apartment.location && rooms === apartment.rooms) {
-        return apartment;
-      }
-    });
+   let filteredList = [];
+   if (filter.rooms  === "all") {
+    filteredList = allApartments.filter((apartment) => apartment.rooms === filter.rooms);
+  } 
+  if (filter.location === "all") {
+    filteredList = allApartments.filter((apartment) => apartment.location === filter.location);
+  }
+  //write me a filter which displays all apartments with the same location and rooms as the filter and only if the apartment is available
+  if (filter.location !== "all" && filter.rooms !== "all") {
+    filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.rooms === filter.rooms && apartment.available === true);
+  };
 
-    const filteredApartments = allApartments.filter(apartment => apartment.available);
-  
     console.log(filteredList, "filteredList");
 
 
@@ -147,8 +144,8 @@ function Page() {
     <span className="small-label">Fully serviced apartments</span>
     <h2>Browse our apartments</h2>
   </div>
-  <Filters />
-  <ApartmentsList filteredList={filteredList} allApartments={allApartments} filteredApartments={filteredApartments}/>
+  <Filters  locationChanged={locationChanged} roomsChanged={roomsChanged} />
+  <ApartmentsList filteredList={filteredList} filter={filter} />
     </>
   );
 }

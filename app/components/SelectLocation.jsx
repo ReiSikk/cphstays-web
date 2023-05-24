@@ -15,7 +15,7 @@ export default function SelectLocation(props) {
           labelId="location"
           id="location-select-autowidth"
           value={props.location}
-          onChange={props.handleLocation}
+          onChange={props.locationChanged}
           autoWidth
           label="Location"
         >
