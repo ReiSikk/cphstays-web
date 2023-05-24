@@ -3,21 +3,31 @@ import React from "react";
 import ApartmentCard from "../components/ApartmentCard";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ApartmentsList from "../components/ApartmentsList";
 import Filters from "../components/Filters";
 
 function Page() {
 
-    //set state for rooms
-  /*   const [rooms, setRooms] = React.useState('');
-    console.log(rooms); */
+    const [data, setData] = useState(null);
   
-   
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment');
+          const jsonData = await response.json();
+          setData(jsonData);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
 
-    //set state for location
- 
-  
+
+  console.log(data, "data");
+
 
     const [filter, setFilter] = useState({
         location: "all",
