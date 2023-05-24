@@ -21,7 +21,7 @@ function Page() {
 
     const [filter, setFilter] = useState({
         location: "all",
-        rooms: "any",
+        rooms: "all",
       });
       const locationChanged = (e) => {
         setFilter({ ...filter, location: e.target.value });
@@ -58,18 +58,32 @@ function Page() {
             available: true,
 
         },
+        { 
+            id: 5,
+            location: 'Vesterbro',
+            rooms: '3',
+            available: true,
+
+        },
     ]
 
-   let filteredList = [];
+   let filteredList = allApartments
    if (filter.rooms  === "all") {
     filteredList = allApartments.filter((apartment) => apartment.rooms === filter.rooms);
   } 
   if (filter.location === "all") {
     filteredList = allApartments.filter((apartment) => apartment.location === filter.location);
   }
+  if (filter.location === "all" && filter.rooms === "all") {
+    filteredList = allApartments.filter((apartment) => apartment.available === true);
+  }
   //write me a filter which displays all apartments with the same location and rooms as the filter and only if the apartment is available
   if (filter.location !== "all" && filter.rooms !== "all") {
     filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.rooms === filter.rooms && apartment.available === true);
+  };
+  //if location is the same as filter location and rooms is all 
+  if (filter.location !== "all" && filter.rooms === "all") {
+    filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.available === true);
   };
 
     console.log(filteredList, "filteredList");

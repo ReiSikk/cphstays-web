@@ -11,12 +11,6 @@ function ApartmentList (props) {
         {props.filteredList.map( apartment => {
           return apartment ? <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location}  /> : null;
         })}
-
-        {/* this below kinda worked */}
-       {/*  {filteredApartments.map(apartment => (
-          <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location}/>
-
-        ))} */}
       </div>
       </>
     );
