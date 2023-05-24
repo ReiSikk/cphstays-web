@@ -18,7 +18,8 @@ function ApartmentCard(props) {
         </div>
 
         <div className="card_content">
-          <h4 className="apartment_descrpiton">Spacious luxury flat in {props.apartmentLocation}</h4>
+        <span className="small-label">{props.apartmentDistrict}</span>
+          <h4 className="apartment_descrpiton">{props.apartmentLocation}</h4>
           <p className="price">{props.apartmentPrice} DKK/month</p>
           <div className="address">
             {" "}
@@ -29,7 +30,7 @@ function ApartmentCard(props) {
               height={20}
               className="card-icon"
             />
-            <p className="card_p">Sønder Blvd. 24, {props.apartmentLocation}</p>
+            <p className="card_p">{props.apartmentLocation}</p>
           </div>
           <div className="sqm2">
             {" "}
@@ -40,7 +41,7 @@ function ApartmentCard(props) {
               height={20}
               className="card-icon"
             />
-            <p className="card_p">162m2</p>
+            <p className="card_p">{props.apartmentSize}</p>
           </div>
           <div className="bedrooms">
             {" "}
@@ -52,6 +53,17 @@ function ApartmentCard(props) {
               className="card-icon"
             />
             <p className="card_p">{props.apartmentRooms} bedrooms</p>
+          </div>{" "}
+          <div className="beds">
+            {" "}
+            <Image
+              src="/images/bed.svg"
+              alt="icon_1"
+              width={20}
+              height={20}
+              className="card-icon"
+            />
+            <p className="card_p">{props.apartmentBeds} beds</p>
           </div>{" "}
         </div>
       </div>

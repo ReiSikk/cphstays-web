@@ -4,6 +4,21 @@ import ErrorDiv from './ErrorDiv'
 
 function ApartmentList (props) {     
     return (
+        <div>
+          {/* Render your fetched data here */}
+          {props.data && (
+            <ul>
+              {props.data.map((apartment) => (
+                <li key={apartment.id}>
+                <ApartmentCard key={apartment.id} apartmentLocation={apartment.address} apartmentRooms={apartment.rooms} apartmentPrice={apartment.price} apartmentSize={apartment.size} apartmentBeds={apartment.beds} apartmentDistrict={apartment.district} /></li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+
+
+   /*  return (
         <>
       <div className='apartments-list'>
         {props.filteredList.length === 0 ? 
@@ -19,7 +34,7 @@ function ApartmentList (props) {
         </div>
       </div>
       </>
-    );
+    ); */
   };
 
 export default ApartmentList

@@ -187,7 +187,7 @@ function Page() {
     <h2>Browse our apartments</h2>
   <Filters  locationChanged={locationChanged} roomsChanged={roomsChanged} priceChanged={priceChanged} />
   </div>
-  <ApartmentsList filteredList={filteredList} filter={filter} />
+  <ApartmentsList filteredList={filteredList} filter={filter} data={data} />
     </>
   );
 }

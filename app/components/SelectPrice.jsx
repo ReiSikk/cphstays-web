@@ -15,7 +15,6 @@ export default function SelectPrice(props) {
         id="outlined-adornment-amount"
         startAdornment={<InputAdornment position="start">DKK</InputAdornment>}
         label="Amount"
-        helperText="Enter max rent"
         placeholder='Enter rent'
         onChange={props.priceChanged} 
         />
