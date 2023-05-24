@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-function ApartmentCard() {
+function ApartmentCard(props) {
   return (
     <>
       <div className="card">
@@ -18,8 +18,8 @@ function ApartmentCard() {
         </div>
 
         <div className="card_content">
-          <h4 className="apartment_descrpiton">Spacious luxury flat</h4>
-          <p className="price">23000 DKK/month</p>
+          <h4 className="apartment_descrpiton">Spacious luxury flat in {props.apartmentLocation}</h4>
+          <p className="price">{props.apartmentPrice} DKK/month</p>
           <div className="address">
             {" "}
             <Image
@@ -29,7 +29,7 @@ function ApartmentCard() {
               height={20}
               className="card-icon"
             />
-            <p className="card_p">Sønder Blvd. 24, Kbh V</p>
+            <p className="card_p">Sønder Blvd. 24, {props.apartmentLocation}</p>
           </div>
           <div className="sqm2">
             {" "}
@@ -51,7 +51,7 @@ function ApartmentCard() {
               height={20}
               className="card-icon"
             />
-            <p className="card_p">3 bedrooms</p>
+            <p className="card_p">{props.apartmentRooms} bedrooms</p>
           </div>{" "}
         </div>
       </div>

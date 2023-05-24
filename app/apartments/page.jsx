@@ -22,12 +22,17 @@ function Page() {
     const [filter, setFilter] = useState({
         location: "all",
         rooms: "all",
+        maxRent: "all",
       });
+
       const locationChanged = (e) => {
         setFilter({ ...filter, location: e.target.value });
       };
       const roomsChanged = (e) => {
         setFilter({ ...filter, rooms: e.target.value });
+      };
+      const priceChanged = (e) => {
+        setFilter({ ...filter, maxRent: e.target.value });
       };
 
       const allApartments = [
@@ -36,12 +41,15 @@ function Page() {
             location: 'Østerbro',
             rooms: '3',
             available: true,
+            price: "5500",
         },
         { 
             id: 2,
             location: 'Nørrebro',
             rooms: '4',
             available: true,
+            price: "9000",
+
 
         },
         { 
@@ -49,6 +57,7 @@ function Page() {
             location: 'Vesterbro',
             rooms: '2',
             available: false,
+            price: "6600",
 
         },
         { 
@@ -56,6 +65,7 @@ function Page() {
             location: 'Vesterbro',
             rooms: '5',
             available: true,
+            price: "12000"
 
         },
         { 
@@ -63,27 +73,35 @@ function Page() {
             location: 'Vesterbro',
             rooms: '3',
             available: true,
+            price: "8000"
 
         },
     ]
 
    let filteredList = allApartments
+   //
    if (filter.rooms  === "all") {
     filteredList = allApartments.filter((apartment) => apartment.rooms === filter.rooms);
   } 
-  if (filter.location === "all") {
-    filteredList = allApartments.filter((apartment) => apartment.location === filter.location);
+
+  //if location is all and rooms is set display all apartments with the same rooms and only if the apartment is available
+  if (filter.location === "all" && filter.rooms !== "all") {
+    filteredList = allApartments.filter((apartment) => apartment.rooms === filter.rooms && apartment.available === true && apartment.price <= filter.maxRent);
   }
+  
+  //if location is all and rooms is all display all apartments and only if the apartment is available
   if (filter.location === "all" && filter.rooms === "all") {
     filteredList = allApartments.filter((apartment) => apartment.available === true);
   }
-  //write me a filter which displays all apartments with the same location and rooms as the filter and only if the apartment is available
+
+  //if location is set and rooms is set display all apartments with the same location and rooms and only if the apartment is available
   if (filter.location !== "all" && filter.rooms !== "all") {
-    filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.rooms === filter.rooms && apartment.available === true);
+    filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.rooms === filter.rooms && apartment.available === true && apartment.price <= filter.maxRent);
   };
-  //if location is the same as filter location and rooms is all 
+
+  //if location is set and rooms is all display all apartments with the same location and only if the apartment is available
   if (filter.location !== "all" && filter.rooms === "all") {
-    filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.available === true);
+    filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.available === true && apartment.price <= filter.maxRent);
   };
 
     console.log(filteredList, "filteredList");
@@ -158,7 +176,7 @@ function Page() {
     <span className="small-label">Fully serviced apartments</span>
     <h2>Browse our apartments</h2>
   </div>
-  <Filters  locationChanged={locationChanged} roomsChanged={roomsChanged} />
+  <Filters  locationChanged={locationChanged} roomsChanged={roomsChanged} priceChanged={priceChanged} />
   <ApartmentsList filteredList={filteredList} filter={filter} />
     </>
   );

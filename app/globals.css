@@ -1188,6 +1188,26 @@ details > p, details ul li {
 .apt-intro-text {
   padding-bottom: 2rem;
 }
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.error-div {
+  min-height: 50vh;
+  color: var(--color-darkblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.apartments-list {
+  margin-top: 3rem;
+}
 /* ? Apartments page ends here */
 
 
