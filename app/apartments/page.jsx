@@ -172,11 +172,11 @@ function Page() {
             </div>
 
   </div>
-  <div className="apt-intro-text">
+  <div className="apt-intro">
     <span className="small-label">Fully serviced apartments</span>
     <h2>Browse our apartments</h2>
-  </div>
   <Filters  locationChanged={locationChanged} roomsChanged={roomsChanged} priceChanged={priceChanged} />
+  </div>
   <ApartmentsList filteredList={filteredList} filter={filter} />
     </>
   );

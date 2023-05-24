@@ -12,9 +12,11 @@ function ApartmentList (props) {
         <ErrorDiv />
         </>
          : <h3>Available apartments</h3>} 
+        <div className="apartments-list-grid">
         {props.filteredList.map( apartment => {
           return apartment ? <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location} apartmentPrice={apartment.price}  /> : null;
         })}
+        </div>
       </div>
       </>
     );
