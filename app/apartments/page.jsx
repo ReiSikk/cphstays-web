@@ -7,26 +7,27 @@ import { useState, useEffect } from "react";
 import ApartmentsList from "../components/ApartmentsList";
 import Filters from "../components/Filters";
 
-function Page() {
+function Page(props) {
 
-    const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
   
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment');
-          const jsonData = await response.json();
-          setData(jsonData);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      };
-  
-      fetchData();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment');
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
 
-  console.log(data, "data");
+console.log(data, "data");
+
 
 
     const [filter, setFilter] = useState({

@@ -4,13 +4,20 @@ import Image from "next/image";
 
 function ApartmentCard(props) {
   console.log(props, "props in apartmendCard");
+
+/*   const imageLoader = ({ src }) => {
+    // Return the source URL for the image
+    return src;
+  }; */
+
+
   return (
     <>
       <div className="card">
         <div className="card_image">
           {" "}
           <Image
-             src={props.featuredMedia}
+             src={props.featuredImageHref}
              alt={props.apartmentTitle}
             width={250}
             height={150}
