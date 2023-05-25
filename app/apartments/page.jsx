@@ -9,7 +9,8 @@ import Filters from "../components/Filters";
 
 function Page(props) {
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +26,6 @@ function Page(props) {
     fetchData();
   }, []);
 
-
-console.log(data, "data");
 
 
 
@@ -46,7 +45,7 @@ console.log(data, "data");
         setFilter({ ...filter, maxRent: e.target.value });
       };
 
-      const allApartments = [
+       const allApartments = [
         { 
             id: 1,
             location: 'Østerbro',
@@ -87,10 +86,23 @@ console.log(data, "data");
             price: "8000"
 
         },
-    ]
+    ]  
 
-   let filteredList = allApartments
-   //
+
+
+  
+
+      //map thorugh the JSON response 
+ /*  useEffect(() => {
+    // Filter the data based on a specific condition
+    let filteredResults = data.filter((apartment) => apartment.price <= filter.maxRent);
+    setFilteredData(filteredResults);
+  }, [data, filter]); */
+
+     let filteredList = allApartments 
+
+
+  //
    if (filter.rooms  === "all") {
     filteredList = allApartments.filter((apartment) => apartment.rooms === filter.rooms);
   } 
@@ -113,9 +125,8 @@ console.log(data, "data");
   //if location is set and rooms is all display all apartments with the same location and only if the apartment is available
   if (filter.location !== "all" && filter.rooms === "all") {
     filteredList = allApartments.filter((apartment) => apartment.location === filter.location && apartment.available === true && apartment.price <= filter.maxRent);
-  };
+  }; 
 
-    console.log(filteredList, "filteredList");
 
 
   return (

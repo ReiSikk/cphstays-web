@@ -9,8 +9,8 @@ function ApartmentList (props) {
       console.log(props, "props in apartmentList");
       // Extract the featured image href from the JSON response
       
-      const featuredImageHref = props.data[0]._links['wp:featuredmedia'][0].href;
-      console.log(featuredImageHref, "featuredImageHref");
+/*       const featuredImageHref = props.data[0]._links['wp:featuredmedia'][0].href; */
+
       return (
         <div>
           {/* Render your fetched data here */}
@@ -29,7 +29,7 @@ function ApartmentList (props) {
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
                 featuredImage={apartment.preview_image} 
-                featuredImageHref={featuredImageHref}
+                /* featuredImageHref={featuredImageHref} */
                  />
                 featuredImage={}
                 </li>
