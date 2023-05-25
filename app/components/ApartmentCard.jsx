@@ -3,14 +3,15 @@ import React from "react";
 import Image from "next/image";
 
 function ApartmentCard(props) {
+  console.log(props, "props in apartmendCard");
   return (
     <>
       <div className="card">
         <div className="card_image">
           {" "}
           <Image
-            src="/images/apt_example.jpg"
-            alt="apartment"
+             src={props.featuredMedia}
+             alt={props.apartmentTitle}
             width={250}
             height={150}
             className="the_card_image"

@@ -3,6 +3,10 @@ import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
 
 function ApartmentList (props) {     
+    if (!props.data) {
+        return <div>Loading...</div>;
+      }
+      console.log(props, "props in apartmentList");
     return (
         <div>
           {/* Render your fetched data here */}
@@ -10,7 +14,7 @@ function ApartmentList (props) {
             <ul>
               {props.data.map((apartment) => (
                 <li key={apartment.id}>
-                <ApartmentCard key={apartment.id} apartmentLocation={apartment.address} apartmentRooms={apartment.rooms} apartmentPrice={apartment.price} apartmentSize={apartment.size} apartmentBeds={apartment.beds} apartmentDistrict={apartment.district} /></li>
+                <ApartmentCard key={apartment.id} apartmentLocation={apartment.address} apartmentRooms={apartment.rooms} apartmentPrice={apartment.price} apartmentSize={apartment.size} apartmentBeds={apartment.beds} apartmentDistrict={apartment.district} apartmentPhotos={apartment.apartment_photos} apartmentTitle={apartment.title.rendered} /* featuredMedia={apartment._links["wp:featuredmedia"][0].href} */ /></li>
               ))}
             </ul>
           )}
