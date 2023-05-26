@@ -3,7 +3,7 @@ import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
 
 function ApartmentList (props) {     
-    if (!props.data) {
+    if (!props.availableApartments) {
         return <div>Loading...</div>;
       }
       console.log(props, "props in apartmentList");
@@ -14,9 +14,16 @@ function ApartmentList (props) {
       return (
         <div>
           {/* Render your fetched data here */}
-          {props.data && (
-            <ul>
-              {props.data.map((apartment) => (
+          {props.availableApartments.length === 0 ? 
+        <>
+        <h3>No available Apartments</h3>
+        <ErrorDiv />
+        </>
+         : <h3>Available apartments</h3>} 
+          <section>
+          {props.availableApartments && (
+            <ul className="apartments-list-grid">
+              {props.availableApartments.map((apartment) => (
                 <li key={apartment.id}>
                 <ApartmentCard 
                 key={apartment.id} 
@@ -29,13 +36,12 @@ function ApartmentList (props) {
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
                 featuredImage={apartment.preview_image} 
-                /* featuredImageHref={featuredImageHref} */
                  />
-                featuredImage={}
                 </li>
               ))}
             </ul>
           )}
+          </section>
         </div>
       );
 
