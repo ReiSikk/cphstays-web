@@ -4,7 +4,12 @@ import ApartmentsList from "../../components/ApartmentsList";
 import Filters from "../../components/Filters";
 
 
-function Page() {
+function Page({ images }) {
+
+  /* console.log(
+    images[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full
+      .source_url
+  ); */
 
   const [apartments, setApartments] = useState([]);
   const [availableApartments, setAvailableApartments] = useState([]);
@@ -59,21 +64,16 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
   
     setAvailableApartments(filteredApartments);
   }, [apartments, filter]);
-    
-    
- 
-
 
   
-  
-
-  
-  
-
 
   return (
     <>
       {/* Your JSX content here */}
+      <div className="apartments-list-wrapper">
+        <span className="small-label">Fully serviced apartments</span>
+        <h2>Browse our apartments</h2>
+        </div>
       <Filters
         locationChanged={locationChanged}
         roomsChanged={roomsChanged}
@@ -85,3 +85,5 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
 }
 
 export default Page;
+
+
