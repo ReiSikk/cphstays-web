@@ -13,7 +13,8 @@ function ApartmentCard(props) {
 
   return (
     <>
-      <div className="card">
+    <Link href="/pages/apartment">
+   <div className="card">
         <div className="card_image">
           {" "}
           <Image
@@ -75,6 +76,7 @@ function ApartmentCard(props) {
           </div>{" "}
         </div>
       </div>
+    </Link>
     </>
   );
 }

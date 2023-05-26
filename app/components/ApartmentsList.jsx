@@ -1,23 +1,68 @@
 import React from 'react'
 import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+
+
 
 function ApartmentList (props) {     
-    if (!props.data) {
+
+  const pathname = usePathname();
+
+/*   const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    function getData() {
+      setImages(props.dataImg);
+    }
+    getData();
+  }, [props.dataImg]); */
+
+
+    if (!props.availableApartments) {
         return <div>Loading...</div>;
       }
+
       console.log(props, "props in apartmentList");
       // Extract the featured image href from the JSON response
-      
-/*       const featuredImageHref = props.data[0]._links['wp:featuredmedia'][0].href; */
+    
+const featuredImageHref = props.availableApartments
+      /* const featuredImage = props.availableApartments[0]._links["wp:featuredmedia"][0].media_details */
+      console.log(featuredImageHref, "featuredImageHref"); 
 
       return (
         <div>
           {/* Render your fetched data here */}
-          {props.data && (
-            <ul>
-              {props.data.map((apartment) => (
+          {props.availableApartments.length === 0 ? 
+        <>
+        <h3>No available Apartments</h3>
+        <ErrorDiv />
+        </>
+         : <h4>Available apartments</h4>} 
+          <section>
+          {props.availableApartments && (
+            <ul className="apartments-list-grid">
+              {props.availableApartments.map((apartment) => (
                 <li key={apartment.id}>
+                 <Link
+                 pathname={pathname}
+                 href={{
+                  pathname: "pages/apartment",
+                  query: {
+                      address: apartment.address,
+                      district: apartment.district,
+                      price: apartment.price,
+                      size: apartment.size,
+                      beds: apartment.beds,
+                      rooms: apartment.rooms,
+                      title: apartment.title.rendered,
+                      photos: apartment.apartment_photos,
+                  }
+              }}
+                   >
                 <ApartmentCard 
                 key={apartment.id} 
                 apartmentLocation={apartment.address} 
@@ -28,14 +73,13 @@ function ApartmentList (props) {
                 apartmentDistrict={apartment.district} 
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
-                featuredImage={apartment.preview_image} 
-                /* featuredImageHref={featuredImageHref} */
                  />
-                featuredImage={}
+                 </Link>
                 </li>
               ))}
             </ul>
           )}
+          </section>
         </div>
       );
 
@@ -60,3 +104,18 @@ function ApartmentList (props) {
   };
 
 export default ApartmentList
+
+/*   //get the images
+  export async function getStaticProps() {
+    // Get data from api
+    const imgData = await fetch("https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment")
+    const dataImg = await imgData.json();
+
+  
+    // Return the data inside props
+    return {
+      props: {
+        dataImg,
+      },
+    };
+  } */
