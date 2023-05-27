@@ -20,19 +20,19 @@ function NavigationBar() {
            </Link>
          </div>
         <div className="nav-right">
-       <Link href="/apartments">
+       <Link href="/pages/apartments">
           Apartments
         </Link>
-        <Link href="/landlords">
+        <Link href="/pages/landlords">
           For landlords
         </Link>
-       <Link href="/about">
+       <Link href="/pages/about">
           About
         </Link>
-        <Link href="/contact">
+        <Link href="/pages/contact">
           Contact
         </Link>
-          <Link className="primary-btn" href="/corphousing">Corporate housing</Link>
+          <Link className="primary-btn" href="/pages/corphousing">Corporate housing</Link>
         </div>
         </>
 }

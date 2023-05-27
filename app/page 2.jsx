@@ -32,6 +32,8 @@ export default function Home() {
     // Add more images as needed
   ]; */
 
+
+
   return (
     <>
     <header className={styles.header}>
@@ -128,3 +130,4 @@ export default function Home() {
     </>
   )
 }
+

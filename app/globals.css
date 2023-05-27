@@ -22,6 +22,42 @@
   margin: 0;
 }
 
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-headings);
+  line-height: 1.3;
+}
+
+h1 {
+  font-weight: 700;
+  margin-top: 0;
+  font-size: 4.209rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 1.333rem;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -42,6 +78,9 @@ body {
   color: var(--color-body-text);
   max-width: 1920px;
   margin: 0 auto;
+  scroll-behavior: smooth;
+  font-weight: 400;
+  line-height: 1.75;
 }
 main {
   margin-top: 5rem;
@@ -68,40 +107,17 @@ p,li {
   font-weight: 400;
   max-width: 66ch;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: var(--font-headings);
-}
-h1 {
-  font-weight: 700;
-  font-size: 3.052rem;
-}
-h2 {
-  font-weight: 500;
-  font-size: 2.441rem;
-}
-h3 {
-  font-size: 1.953rem;
-}
-h4 {
-  font-size: 1.563rem;
-}
+
+
+
+
 .h5-style {
   font-weight: 500;
   font-family: var(--font-headings);
   font-size: 1.25rem;
 }
-h5 {
-  font-size: 1.25rem;
-}
-h3,
-h4,
-h5 {
-  font-weight: 600;
-}
+
+
 
 .hidden {
   display: none;
@@ -477,6 +493,22 @@ footer {
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 16px 0px;
 }
+.apt-hero-cta {
+  margin-top: -8rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92.5% !important;
+  max-width: 650px;
+}
+#apt-hero-benefits {
+   display: block;
+  position: sticky;
+  width: fit-content; 
+}
+#apt-hero-benefits li {
+width: 100%;
+}
 .search-btn {
   background-color: transparent;
   border: none;
@@ -522,6 +554,10 @@ footer {
   .hero-cta {
     margin-left: 8%;
     margin-right: 0;
+  }
+  .apt-hero-cta {
+    margin-left: auto;
+    margin-right: 8%;
   }
 }
 
@@ -1008,18 +1044,20 @@ input:-internal-autofill-selected {
 
 /* ? Apartment card starts here */
 .card {
+  justify-self: center;
+  max-width: 350px;
+  max-height: 550px;
   width: 100%;
-  max-width: 450px;
   height: auto;
-  background: #fafafa;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  background: #fafafb;
+  box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
+  /*border: solid 1px #fafafb;*/
   border-radius: 10px;
-  transition: 0.3s all ease;
+  transition:  all 0.3s ease;
   position: relative;
 }
-.address > img, .sqm2 > img, .bedrooms > img {
-  max-width: 36px;
-  height: auto;
+.card:hover {
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.3);
 }
 .card_button {
   width: 55px;
@@ -1038,11 +1076,13 @@ input:-internal-autofill-selected {
   padding: 4px 3px 0px 0px;
 }
 
-
 .the_card_image {
   max-width: 100%;
   max-height: 100%;
-
+  min-height: 225px;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
 .card_content {
@@ -1050,41 +1090,37 @@ input:-internal-autofill-selected {
   grid-template-areas:
     "a a"
     "b b"
-    "c c"
-    "d e";
-  padding: 1.5rem 1rem;
-  text-align: left;
-  grid-gap: 12px;
+    "c d"
+    "e e";
+  gap: 12px;
+  padding: 0.75rem 1rem 1.5rem 1rem;
 }
 .address,
 .sqm2,
-.bedrooms {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  align-items: center;
-  justify-content: baseline;
+.bedrooms,
+.cpr {
+  display: flex;
+  flex-direction: row;
 }
 .address {
-  grid-area: c;
+  grid-area: b;
 }
 .sqm2 {
-  grid-area: d;
+  grid-area: c;
 }
 .bedrooms {
+  grid-area: d;
+}
+.cpr {
   grid-area: e;
 }
-
+.cpr_p {
+  font-weight: bolder;
+  margin-right: 0.5rem;
+}
 .apartment_descrpiton {
   grid-area: a;
-  font-weight: bolder;
-  max-width: 250px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.price {
-  grid-area: b;
+  font-weight: bold;
   padding-bottom: 0.2rem;
 }
 /* ? Apartment card ends here */
@@ -1149,6 +1185,67 @@ details > p, details ul li {
   border-top-right-radius: 8px;
 }
 /* ? FAQ Comp ends here */
+
+/* ? Apartments page starts here */
+
+.apt-grid-wrapper {
+  display: grid;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 2.25rem;
+  column-gap: 2rem;
+}
+
+.apt-intro {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  background: var(--color-primary);
+}
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding-bottom: 1.25rem;
+}
+.error-div {
+  min-height: 50vh;
+  color: var(--color-darkblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.apartments-list {
+  margin: 2rem 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.apartments-list-wrapper {
+  padding: 3rem 0rem;
+}
+.apartments-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  padding-top: 1.75rem;
+  padding-bottom: 3rem;
+}
+.apartments-list-grid > div {
+justify-self: center;
+}
+@media only screen and (min-width:599px) {
+  .apartments-list-grid > div {
+    justify-self: start;
+    }
+}
+/* ? Apartments page ends here */
 
 
 @media (prefers-color-scheme: dark) {

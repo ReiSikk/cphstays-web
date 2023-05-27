@@ -3,11 +3,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import HDIWsection from '../components/HDIWsection'
-import ApartmentsCarousel from '../components/ApartmentsCarousel'
-import Testimonials from '../components/ServicesSection'
-import TestimonialsSection from '../components/TestimonialsSection'
-import ContactForm from '../components/ContactForm'
+import HDIWsection from '../../components/HDIWsection'
+import ApartmentsCarousel from '../../components/ApartmentsCarousel'
+import Testimonials from '../../components/ServicesSection'
+import TestimonialsSection from '../../components/TestimonialsSection'
+import ContactForm from '../../components/ContactForm'
 
 function page() {
   return (
