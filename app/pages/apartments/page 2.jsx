@@ -4,7 +4,7 @@ import ApartmentsList from "../../components/ApartmentsList";
 import Filters from "../../components/Filters";
 
 
-function Page() {
+function Page({ images }) {
 
   /* console.log(
     images[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full
@@ -27,10 +27,6 @@ function Page() {
 
     fetchData();
   }, []);
-
-
-
-  
 
 console.log(apartments,"apartments"); // Add this line to check the fetched data
   
@@ -83,7 +79,7 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
         roomsChanged={roomsChanged}
         priceChanged={priceChanged}
       />
-      <ApartmentsList  filter={filter} availableApartments={availableApartments} apartments={apartments} />
+      <ApartmentsList  filter={filter} availableApartments={availableApartments} />
     </>
   );
 }
@@ -91,4 +87,3 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
 export default Page;
 
 
- 

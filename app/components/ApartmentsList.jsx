@@ -3,35 +3,28 @@ import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 
 
 
 function ApartmentList (props) {     
-
-  const pathname = usePathname();
-
-/*   const [images, setImages] = useState([]);
+  const [imgData, setImgData] = useState([]);
 
   useEffect(() => {
-    function getData() {
-      setImages(props.dataImg);
-    }
-    getData();
-  }, [props.dataImg]); */
+    const fetchData = async () => {
+        const response = await fetch('https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment?_embed');
+        const jsonData = await response.json();
+        setImgData(jsonData);
+    };
+
+    fetchData();
+  }, []);
+
 
 
     if (!props.availableApartments) {
         return <div>Loading...</div>;
       }
-
-      console.log(props, "props in apartmentList");
-      // Extract the featured image href from the JSON response
-    
-const featuredImageHref = props.availableApartments
-      /* const featuredImage = props.availableApartments[0]._links["wp:featuredmedia"][0].media_details */
-      console.log(featuredImageHref, "featuredImageHref"); 
 
       return (
         <div>
@@ -48,7 +41,7 @@ const featuredImageHref = props.availableApartments
               {props.availableApartments.map((apartment) => (
                 <li key={apartment.id}>
                  <Link
-                 pathname={pathname}
+                 /* pathname={pathname} */
                  href={{
                   pathname: "pages/apartment",
                   query: {
@@ -73,6 +66,7 @@ const featuredImageHref = props.availableApartments
                 apartmentDistrict={apartment.district} 
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
+                imgData={imgData}
                  />
                  </Link>
                 </li>
@@ -105,16 +99,18 @@ const featuredImageHref = props.availableApartments
 
 export default ApartmentList
 
+
+
 /*   //get the images
   export async function getStaticProps() {
     // Get data from api
-    const imgData = await fetch("https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment")
+    const imgData = await fetch("https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment?_embed")
     const dataImg = await imgData.json();
 
   
     // Return the data inside props
     return {
-      props: {
+      data: {
         dataImg,
       },
     };
