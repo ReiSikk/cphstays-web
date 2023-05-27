@@ -10,8 +10,8 @@ function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apart
 console.log(imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url) */
 console.log(imgData, "images")
 // Check if imgData and its nested properties exist
-const imgUrl = imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-console.log(imgUrl);
+/* const imgUrl = imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+console.log(imgUrl); */
 
 
 
@@ -23,7 +23,7 @@ console.log(imgUrl);
         <div className="card_image">
           {" "}
           <Image
-             src={imgUrl}
+             src="/images/something.jpg"
              alt={apartmentTitle}
              width={250}
             height={150}
