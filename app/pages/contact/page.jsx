@@ -35,12 +35,22 @@ function page() {
           <p>info@managemyair.dk</p>
         </div>
       </div>
+      <section className='contact-section'>
+        <h3>Follow us on</h3>
       <div className="contact-some">
-        <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
-        <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
-        <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
-        <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
+        <div className="footer-some">
+        <Link href="https://www.facebook.com/Managemyair/" target='_blank'>
+          <Image src="/images/icons8-facebook.svg" alt="facebook logo" width={28} height={28} className="some-logo" />
+        </Link>
+        <Link href="https://www.instagram.com/managemyair/?hl=en" target='_blank'>
+          <Image src="/images/icons8-instagram.svg" alt="instagram logo" width={28} height={28} className="some-logo" />
+        </Link>
+        <Link href="https://www.linkedin.com/company/managemyair/about/" target='_blank'>
+          <Image src="/images/icons8-linkedin.svg" alt="linkedin logo" width={28} height={28} className="some-logo" />
+        </Link>
+        </div>
       </div>
+      </section>
     </div>
     </section>
     <ContactForm />

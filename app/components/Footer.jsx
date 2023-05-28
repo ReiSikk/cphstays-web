@@ -50,13 +50,13 @@ function Footer() {
         <p className="copyright">Copyright ManageMyAir 2023 ©</p>
           </div>
         <div className="footer-some">
-        <Link href="https://www.facebook.com/Managemyair/">
+        <Link href="https://www.facebook.com/Managemyair/" target='_blank'>
           <Image src="/images/icons8-facebook.svg" alt="facebook logo" width={28} height={28} className="some-logo" />
         </Link>
-        <Link href="https://www.instagram.com/managemyair/?hl=en">
+        <Link href="https://www.instagram.com/managemyair/?hl=en" target='_blank'>
           <Image src="/images/icons8-instagram.svg" alt="instagram logo" width={28} height={28} className="some-logo" />
         </Link>
-        <Link href="https://www.linkedin.com/company/managemyair/about/">
+        <Link href="https://www.linkedin.com/company/managemyair/about/" target='_blank'>
           <Image src="/images/icons8-linkedin.svg" alt="linkedin logo" width={28} height={28} className="some-logo" />
         </Link>
         </div>

@@ -1306,6 +1306,8 @@ justify-self: center;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+.contact-section {
   padding: 1rem 0rem;
 }
 @media only screen and (min-width:375px) {
