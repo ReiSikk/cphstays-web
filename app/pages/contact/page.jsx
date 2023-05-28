@@ -3,44 +3,36 @@
 import React from 'react'
 import Image from 'next/image'
 import ContactForm from '../../components/ContactForm'
+import Link from 'next/link'
 
 
 function page() {
   return (
     <>
-
-    <article>
+<div className='contact-wrapper'>
+  <section>
+    <article className='contact-hero'>
         <h1>Get in touch</h1>
-        <p>Fill out the form below to send us a message and we will get back to you as soon as possible!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem ex velit tempora mollitia alias nesciunt reprehenderit sequi vero deleniti? Ea quae ab sequi amet saepe. Esse voluptatem eveniet nostrum.
+        <p>We understand the importance of personal connections, which is why we encourage you to reach out to us with any inquiries, booking requests, or special requirements. Our dedicated team is ready to assist you every step of the way. For immediate assistance, please feel free to contact us at <Link href="tel:+45 52 74 01 30">+45 52 74 01 30</Link> or drop us an email at <Link href="mailto:info@managemyair.dk">info@managemyair.dk</Link>.
         </p>
     </article>
     <div className="contact-information">
       <div className="contact-block">
         <div className="contact-left">
-          <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
+          <Image src='/images/phone-icon.svg' alt='call us icon' width={38} height={38} className="contact-img" />
         </div>
         <div className="contact-right">
-          <h4>Address</h4>
-          <p>Some street 54.th, Kobenhavn</p>
+          <h5>Call us</h5>
+          <Link href="tel:+45 52 74 01 30">+45 52 74 01 30</Link>
         </div>
       </div>
       <div className="contact-block">
         <div className="contact-left">
-          <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
+          <Image src='/images/email-icon.svg' alt='contact us by email icon' width={38} height={38} className="contact-img" />
         </div>
         <div className="contact-right">
-          <h4>Address</h4>
-          <p>Some street 54.th, Kobenhavn</p>
-        </div>
-      </div>
-      <div className="contact-block">
-        <div className="contact-left">
-          <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
-        </div>
-        <div className="contact-right">
-          <h4>Address</h4>
-          <p>Some street 54.th, Kobenhavn</p>
+          <h5>Email us</h5>
+          <p>info@managemyair.dk</p>
         </div>
       </div>
       <div className="contact-some">
@@ -50,7 +42,9 @@ function page() {
         <Image src='/images/check-icon.svg' alt='contact image' width={48} height={48} className="contact-img" />
       </div>
     </div>
+    </section>
     <ContactForm />
+    </div>
     </>
   );
 }
