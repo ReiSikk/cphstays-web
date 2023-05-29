@@ -1,11 +1,14 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+import WhatWeAreAbout from '@/app/components/WhatWeAreAbout'
+import WhyChooseUs from '@/app/components/WhyChooseUs'
 
 function page() {
   return (
     <>
     <section className='about-hero-wrapper'>
-        <h1>Explain who and what we are</h1>
+        <h1>What CPH Stays is about</h1>
         <div className="about-hero-container">
           <div className="about-hero-img"></div>
        {/*    <Image
@@ -56,13 +59,12 @@ function page() {
           </ul>
           </div>
         </div>
-          <div className="hero-quote">
+         {/*  <div className="hero-quote">
             <h3>Something</h3>
-          </div>
+          </div> */}
       </section>
       <section className="benefits">
         <div className="benefits-container">
-        <div className="benefits-bg-img"></div>
           <div className="benefits-right">
             <p>Lorem ipsum</p>
             <h3>Some kind of message </h3>
@@ -72,7 +74,9 @@ function page() {
               elit. Quisquam, voluptatum.
             </p>
           </div>
+          <div id="benefits">
           <div className="benefits-content">
+        <div className="benefits-bg-img"></div>
           <div className="benefits-left">
             <ul className="benefits-list">
               <li>
@@ -114,8 +118,11 @@ function page() {
             </ul>
           </div>
           </div>
+          </div>
         </div>
       </section>
+      <WhatWeAreAbout />
+      <WhyChooseUs />
     </>
   )
 }
