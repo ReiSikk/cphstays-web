@@ -109,6 +109,12 @@ main {
   margin-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+} 
+@media only screen and (min-width:1000px) {
+  main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 a {
@@ -1256,7 +1262,8 @@ align-items: center;
 
 }
 .about-hero-wrapper {
-  padding-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .benefits-icon {
