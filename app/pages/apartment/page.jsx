@@ -11,6 +11,21 @@ import { useRouter } from 'next/router';
 
 
 function Apartmentpage() {
+  const router = useRouter();
+  const {
+  query: { address, district, price, size, beds, rooms, title },
+  } = router
+  
+  const props = {
+  address: apartment.address,
+  district: apartment.district,
+  price: apartment.price,
+  size: apartment.size,
+  beds: apartment.beds,
+  rooms: apartment.rooms,
+  title: apartment.title.rendered,
+  }
+
 
   /*   const params = useSearchParams();
     const pathname = usePathname();
@@ -23,6 +38,7 @@ function Apartmentpage() {
   return (
     <>
     <h3>ApartmentPage</h3>
+    <p>{props.address}</p>
     </>
   )
 }

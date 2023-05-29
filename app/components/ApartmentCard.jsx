@@ -11,7 +11,7 @@ console.log(imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full
 console.log(imgData, "images")
 // Check if imgData and its nested properties exist
 /* const imgUrl = imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-console.log(imgUrl); */
+console.log(imgUrl, "imgUrl"); */
 
 
 
@@ -23,7 +23,7 @@ console.log(imgUrl); */
         <div className="card_image">
           {" "}
           <Image
-             src="/images/something.jpg"
+             src={imgData}
              alt={apartmentTitle}
              width={250}
             height={150}
@@ -35,8 +35,9 @@ console.log(imgUrl); */
         </div>
 
         <div className="card_content">
+          <h4 className="apartment_descrpiton">{apartmentLocation}
         <span className="small-label">{apartmentDistrict}</span>
-          <h4 className="apartment_descrpiton">{apartmentLocation}</h4>
+          </h4>
           <p className="price">{apartmentPrice} DKK/month</p>
           <div className="address">
             {" "}
@@ -58,8 +59,7 @@ console.log(imgUrl); */
               height={20}
               className="card-icon"
             />
-            <p className="card_p">{apartmentSize}</p>
-          <p>{apartmentSize ? apartmentSize : 'unavailable'}</p>
+          <p className="card_p">{apartmentSize ? `${apartmentSize} m2` : 'unavailable'}</p>
           </div>
           <div className="bedrooms">
             {" "}
@@ -70,7 +70,7 @@ console.log(imgUrl); */
               height={20}
               className="card-icon"
             />
-            <p className="card_p">{apartmentRooms} bedrooms</p>
+            <p className="card_p"> {apartmentRooms ? `  ${apartmentRooms} bedrooms` : "unavailable"}</p>
           </div>{" "}
           <div className="beds">
             {" "}

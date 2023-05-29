@@ -25,9 +25,6 @@
 }
 
 
-p {
-  margin-bottom: 1em;
-}
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-headings);
@@ -746,6 +743,7 @@ label {
   padding-bottom: 0.5rem;
   letter-spacing: 1.25px;
   display: block;
+  font-size: 1rem;
 }
 
 .steps-list {
@@ -1137,7 +1135,7 @@ input:-internal-autofill-selected {
   max-width: 350px;
   max-height: 550px;
   width: 100%;
-  height: auto;
+  height: 100%;
   background: #fafafb;
   box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
   /*border: solid 1px #fafafb;*/
@@ -1147,6 +1145,9 @@ input:-internal-autofill-selected {
 }
 .card:hover {
     box-shadow: 0 10px 45px rgba(0, 0, 0, 0.3);
+}
+.apartment_descrpiton .small-label {
+padding-top: 0.5rem;
 }
 .card_button {
   width: 55px;
@@ -1187,21 +1188,39 @@ input:-internal-autofill-selected {
 .address,
 .sqm2,
 .bedrooms,
-.cpr {
+.cpr,
+.beds {
   display: flex;
   flex-direction: row;
 }
+.beds {
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
 .address {
   grid-area: b;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
 }
 .sqm2 {
   grid-area: c;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
 }
 .bedrooms {
   grid-area: d;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
 }
 .cpr {
   grid-area: e;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
 }
 .cpr_p {
   font-weight: bolder;
@@ -1347,7 +1366,7 @@ details > p, details ul li {
   padding-right: 1rem;
 }
 .apartments-list-wrapper {
-  padding: 3rem 0rem;
+  padding: 3rem 0rem 2rem 0rem;
 }
 .apartments-list-grid {
   display: grid;

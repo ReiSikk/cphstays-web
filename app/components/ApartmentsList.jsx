@@ -3,6 +3,8 @@ import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Router from 'next/router';
 
 
 
@@ -20,6 +22,23 @@ function ApartmentList (props) {
     fetchData();
   }, []);
 
+  function sendData() {
+    Router.push({
+      pathname: 'pages/apartment',
+      query: {
+        address: apartment.address,
+        district: apartment.district,
+        price: apartment.price,
+        size: apartment.size,
+        beds: apartment.beds,
+        rooms: apartment.rooms,
+        title: apartment.title.rendered,
+    }
+    })
+  }
+
+
+
 
 
     if (!props.availableApartments) {
@@ -31,7 +50,7 @@ function ApartmentList (props) {
           {/* Render your fetched data here */}
           {props.availableApartments.length === 0 ? 
         <>
-        <h3>No available Apartments</h3>
+        <h4>No available Apartments</h4>
         <ErrorDiv />
         </>
          : <h4>Available apartments</h4>} 
@@ -39,22 +58,12 @@ function ApartmentList (props) {
           {props.availableApartments && (
             <ul className="apartments-list-grid">
               {props.availableApartments.map((apartment) => (
+
                 <li key={apartment.id}>
                  <Link
+                 onClick={ ()=> sendData()}
                  /* pathname={pathname} */
-                 href={{
-                  pathname: "pages/apartment",
-                  query: {
-                      address: apartment.address,
-                      district: apartment.district,
-                      price: apartment.price,
-                      size: apartment.size,
-                      beds: apartment.beds,
-                      rooms: apartment.rooms,
-                      title: apartment.title.rendered,
-                      photos: apartment.apartment_photos,
-                  }
-              }}
+                 href="pages/apartment"
                    >
                 <ApartmentCard 
                 key={apartment.id} 
@@ -66,7 +75,8 @@ function ApartmentList (props) {
                 apartmentDistrict={apartment.district} 
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
-                imgData={imgData}
+                imgData={apartment._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}
+              
                  />
                  </Link>
                 </li>
