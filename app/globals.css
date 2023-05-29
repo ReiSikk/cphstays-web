@@ -12,6 +12,8 @@
   --color-body-text: #1a1a1a;
   --color-darkblue: #020426;
   --color-btn-hover: #020426;
+  --color-darkgray-label: #4b4b4b;
+  --color-spacer: #e0e0e0
   --fs-btn: 1em;
   --fw-btn: "600";
 }
@@ -1445,6 +1447,70 @@ justify-self: center;
   }
 }
 /* ? Contact page ends here */
+
+/* ?Single Apartment page starts here */
+.apt-info-wrapper {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+.single-apt-address {
+  font-weight: 500;
+  font-size: 1.33rem;
+  padding-top: 0.5rem;
+  max-width: 62ch;
+  padding-bottom: 1rem;
+  color: var(--color-darkgray-label);
+}
+.single-apt-images {
+  padding: 2rem 0rem;
+}
+.single-apt-images img {
+  width: 100%;
+  min-height: 250px;
+  height: 50vh;
+  max-height: 800px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+@media only screen and (min-width:1200px) {
+  .single-apt-images img {
+   height: 66vh;
+  }
+
+}
+
+.apartment-desc {
+  padding-top: 0.5rem;
+  border-top: solid 1px #e0e0e0;
+}
+.apartment-details ul li {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-bottom: solid 1px #e0e0e0;
+  padding: 0.75rem;
+  gap: 0.75rem;
+}
+.apartment-details ul li span {
+  display: flex;
+  align-items: center;
+}
+.apt-details-wrapper {
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+}
+.apt-info-left {
+  padding: 1rem;
+}
+
+/* ?Single Apartment page starts here */
 
 
 @media (prefers-color-scheme: dark) {

@@ -1,24 +1,53 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
-function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apartmentSize, apartmentBeds, apartmentDistrict, apartmentPhotos, apartmentTitle, imgData}) {
 
- /*  console.log(props.imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url) */
- 
-/* 
-console.log(imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url) */
-console.log(imgData, "images")
-// Check if imgData and its nested properties exist
-/* const imgUrl = imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-console.log(imgUrl, "imgUrl"); */
+function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apartmentSize, apartmentBeds, apartmentDistrict, apartmentPhotos, apartmentTitle, imgData, apartmentDescription}) {
 
+/*   const router = useRouter();
+  const pathname = usePathname();
+
+  const handleClick = () => {
+    e.preventDefault();
+    router.push({
+      pathname: '/apartment',
+      query: {
+        apartmentLocation,
+        apartmentRooms,
+        apartmentPrice,
+        apartmentSize,
+        apartmentBeds,
+        apartmentDistrict,
+        apartmentPhotos,
+        apartmentTitle,
+        imgData
+      },
+    });
+  }; */
 
 
 
   return (
     <>
-    <Link href="/pages/apartment">
+    <Link  href={{
+          pathname: '/pages/apartment',
+          query: {
+            address: apartmentLocation,
+            rooms: apartmentRooms,
+            price: apartmentPrice,
+            size: apartmentSize,
+            beds: apartmentBeds,
+            district: apartmentDistrict,
+            photos: apartmentPhotos,
+            title: apartmentTitle,
+            img: imgData,
+            description: apartmentDescription,
+          }
+        }}
+    
+    /* onClick={handleClick} */>
    <div className="card">
         <div className="card_image">
           {" "}

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
@@ -22,30 +23,12 @@ function ApartmentList (props) {
     fetchData();
   }, []);
 
-  function sendData() {
-    Router.push({
-      pathname: 'pages/apartment',
-      query: {
-        address: apartment.address,
-        district: apartment.district,
-        price: apartment.price,
-        size: apartment.size,
-        beds: apartment.beds,
-        rooms: apartment.rooms,
-        title: apartment.title.rendered,
-    }
-    })
-  }
-
-
-
-
-
     if (!props.availableApartments) {
         return <div>Loading...</div>;
       }
 
       return (
+        <>
         <div>
           {/* Render your fetched data here */}
           {props.availableApartments.length === 0 ? 
@@ -60,11 +43,6 @@ function ApartmentList (props) {
               {props.availableApartments.map((apartment) => (
 
                 <li key={apartment.id}>
-                 <Link
-                 onClick={ ()=> sendData()}
-                 /* pathname={pathname} */
-                 href="pages/apartment"
-                   >
                 <ApartmentCard 
                 key={apartment.id} 
                 apartmentLocation={apartment.address} 
@@ -75,16 +53,16 @@ function ApartmentList (props) {
                 apartmentDistrict={apartment.district} 
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
+                apartmentDescription={apartment.apartment_description}
                 imgData={apartment._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}
-              
-                 />
-                 </Link>
+               />
                 </li>
               ))}
             </ul>
           )}
           </section>
         </div>
+        </>
       );
 
 
