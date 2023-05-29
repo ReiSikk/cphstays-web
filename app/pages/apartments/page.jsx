@@ -17,7 +17,7 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment');
+        const response = await fetch('https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment?_embed');
         const jsonData = await response.json();
         setApartments(jsonData);
       } catch (error) {

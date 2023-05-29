@@ -1,8 +1,11 @@
+"use client";
 import React from 'react'
 import ApartmentCard from './ApartmentCard'
 import ErrorDiv from './ErrorDiv'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Router from 'next/router';
 
 
 
@@ -20,18 +23,17 @@ function ApartmentList (props) {
     fetchData();
   }, []);
 
-
-
     if (!props.availableApartments) {
         return <div>Loading...</div>;
       }
 
       return (
+        <>
         <div>
           {/* Render your fetched data here */}
           {props.availableApartments.length === 0 ? 
         <>
-        <h3>No available Apartments</h3>
+        <h4>No available Apartments</h4>
         <ErrorDiv />
         </>
          : <h4>Available apartments</h4>} 
@@ -39,23 +41,8 @@ function ApartmentList (props) {
           {props.availableApartments && (
             <ul className="apartments-list-grid">
               {props.availableApartments.map((apartment) => (
+
                 <li key={apartment.id}>
-                 <Link
-                 /* pathname={pathname} */
-                 href={{
-                  pathname: "pages/apartment",
-                  query: {
-                      address: apartment.address,
-                      district: apartment.district,
-                      price: apartment.price,
-                      size: apartment.size,
-                      beds: apartment.beds,
-                      rooms: apartment.rooms,
-                      title: apartment.title.rendered,
-                      photos: apartment.apartment_photos,
-                  }
-              }}
-                   >
                 <ApartmentCard 
                 key={apartment.id} 
                 apartmentLocation={apartment.address} 
@@ -66,15 +53,16 @@ function ApartmentList (props) {
                 apartmentDistrict={apartment.district} 
                 apartmentPhotos={apartment.apartment_photos} 
                 apartmentTitle={apartment.title.rendered} 
-                imgData={imgData}
-                 />
-                 </Link>
+                apartmentDescription={apartment.apartment_description}
+                imgData={apartment._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}
+               />
                 </li>
               ))}
             </ul>
           )}
           </section>
         </div>
+        </>
       );
 
 

@@ -1,29 +1,58 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
-function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apartmentSize, apartmentBeds, apartmentDistrict, apartmentPhotos, apartmentTitle, imgData}) {
 
- /*  console.log(props.imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url) */
- 
-/* 
-console.log(imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url) */
-console.log(imgData, "images")
-// Check if imgData and its nested properties exist
-/* const imgUrl = imgData[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-console.log(imgUrl); */
+function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apartmentSize, apartmentBeds, apartmentDistrict, apartmentPhotos, apartmentTitle, imgData, apartmentDescription}) {
 
+/*   const router = useRouter();
+  const pathname = usePathname();
+
+  const handleClick = () => {
+    e.preventDefault();
+    router.push({
+      pathname: '/apartment',
+      query: {
+        apartmentLocation,
+        apartmentRooms,
+        apartmentPrice,
+        apartmentSize,
+        apartmentBeds,
+        apartmentDistrict,
+        apartmentPhotos,
+        apartmentTitle,
+        imgData
+      },
+    });
+  }; */
 
 
 
   return (
     <>
-    <Link href="/pages/apartment">
+    <Link  href={{
+          pathname: '/pages/apartment',
+          query: {
+            address: apartmentLocation,
+            rooms: apartmentRooms,
+            price: apartmentPrice,
+            size: apartmentSize,
+            beds: apartmentBeds,
+            district: apartmentDistrict,
+            photos: apartmentPhotos,
+            title: apartmentTitle,
+            img: imgData,
+            description: apartmentDescription,
+          }
+        }}
+    
+    /* onClick={handleClick} */>
    <div className="card">
         <div className="card_image">
           {" "}
           <Image
-             src="/images/something.jpg"
+             src={imgData}
              alt={apartmentTitle}
              width={250}
             height={150}
@@ -35,8 +64,9 @@ console.log(imgUrl); */
         </div>
 
         <div className="card_content">
+          <h4 className="apartment_descrpiton">{apartmentLocation}
         <span className="small-label">{apartmentDistrict}</span>
-          <h4 className="apartment_descrpiton">{apartmentLocation}</h4>
+          </h4>
           <p className="price">{apartmentPrice} DKK/month</p>
           <div className="address">
             {" "}
@@ -58,8 +88,7 @@ console.log(imgUrl); */
               height={20}
               className="card-icon"
             />
-            <p className="card_p">{apartmentSize}</p>
-          <p>{apartmentSize ? apartmentSize : 'unavailable'}</p>
+          <p className="card_p">{apartmentSize ? `${apartmentSize} m2` : 'unavailable'}</p>
           </div>
           <div className="bedrooms">
             {" "}
@@ -70,7 +99,7 @@ console.log(imgUrl); */
               height={20}
               className="card-icon"
             />
-            <p className="card_p">{apartmentRooms} bedrooms</p>
+            <p className="card_p"> {apartmentRooms ? `  ${apartmentRooms} bedrooms` : "unavailable"}</p>
           </div>{" "}
           <div className="beds">
             {" "}
