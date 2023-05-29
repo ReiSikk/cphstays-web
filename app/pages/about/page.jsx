@@ -1,19 +1,24 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+import WhatWeAreAbout from '@/app/components/WhatWeAreAbout'
+import WhyChooseUs from '@/app/components/WhyChooseUs'
 
 function page() {
   return (
     <>
-    <section>
-        <h1>Explain who and what we are</h1>
-        <div className="hero-container">
-          <Image
-            src="/images/contact_hero.jpg"
+    <section className='about-hero-wrapper'>
+        <h1>What CPH Stays is about</h1>
+        <div className="about-hero-container">
+          <div className="about-hero-img"></div>
+       {/*    <Image
+            src="/images/apartments-hero.jpg"
             alt="hero image"
             width={1200}
             height={800}
             className="hero-img"
-          />
+          /> */}
+          <div className="hero-content">
           <ul className="about_list">
             <li>
               <span>
@@ -52,10 +57,11 @@ function page() {
               Lorem ipsum dolor sit amet, consect.
             </li>
           </ul>
-          <div className="hero-quote">
-            <h3>Something</h3>
           </div>
         </div>
+         {/*  <div className="hero-quote">
+            <h3>Something</h3>
+          </div> */}
       </section>
       <section className="benefits">
         <div className="benefits-container">
@@ -68,14 +74,10 @@ function page() {
               elit. Quisquam, voluptatum.
             </p>
           </div>
+          <div id="benefits">
+          <div className="benefits-content">
+        <div className="benefits-bg-img"></div>
           <div className="benefits-left">
-            <Image
-              src="/images/benefits-bg.webp"
-              alt="benefits image"
-              width={1200}
-              height={800}
-              className="benefits-img"
-            />
             <ul className="benefits-list">
               <li>
                 <span>
@@ -115,8 +117,12 @@ function page() {
               </li>
             </ul>
           </div>
+          </div>
+          </div>
         </div>
       </section>
+      <WhatWeAreAbout />
+      <WhyChooseUs />
     </>
   )
 }
