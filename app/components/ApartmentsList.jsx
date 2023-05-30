@@ -36,7 +36,8 @@ function ApartmentList (props) {
         <h4>No available Apartments</h4>
         <ErrorDiv />
         </>
-         : <h4>Available apartments</h4>} 
+         : ""} 
+         <p className='small-label'>{props.availableApartments.length} homes found</p>
           <section className='apartments-flex'>
           {props.availableApartments && (
             <ul className="apartments-list-grid">
@@ -64,42 +65,6 @@ function ApartmentList (props) {
         </div>
         </>
       );
-
-
-   /*  return (
-        <>
-      <div className='apartments-list'>
-        {props.filteredList.length === 0 ? 
-        <>
-        <h3>No available Apartments</h3>
-        <ErrorDiv />
-        </>
-         : <h3>Available apartments</h3>} 
-        <div className="apartments-list-grid">
-        {props.filteredList.map( apartment => {
-          return apartment ? <ApartmentCard key={apartment.id} apartmentRooms={apartment.rooms} apartmentLocation={apartment.location} apartmentPrice={apartment.price}  /> : null;
-        })}
-        </div>
-      </div>
-      </>
-    ); */
   };
 
 export default ApartmentList
-
-
-
-/*   //get the images
-  export async function getStaticProps() {
-    // Get data from api
-    const imgData = await fetch("https://reisikk.dk/cph-stays-apt/wp-json/wp/v2/apartment?_embed")
-    const dataImg = await imgData.json();
-
-  
-    // Return the data inside props
-    return {
-      data: {
-        dataImg,
-      },
-    };
-  } */

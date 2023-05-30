@@ -40,6 +40,7 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
     location: "all",
     rooms: "all",
     maxRent: "all",
+    minSize: "all"
   });
 
   const locationChanged = (e) => {
@@ -53,6 +54,13 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
   const priceChanged = (e) => {
     setFilter({ ...filter, maxRent: e.target.value });
   };
+  const sizeChanged = (e) => {
+    setFilter({ ...filter, minSize: e.target.value });
+  };
+  const searchChanged = (e) => {
+    setFilter({ ...filter, search: e.target.value.toLowerCase() });
+  };
+
 
 
   // Filter available apartments
@@ -62,8 +70,10 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
       const isLocationMatch = filter.location === "all" || apartment.district === filter.location;
       const isRoomsMatch = filter.rooms === "all" || apartment.rooms === filter.rooms;
       const isMaxRentMatch = filter.maxRent === "all" || !filter.maxRent || parseInt(apartment.price) <= parseInt(filter.maxRent);
+      const isMinSizeMatch = filter.minSize === "all" || !filter.minSize || parseInt(apartment.size) >= parseInt(filter.minSize);
+      const isSearchMatch = !filter.search || apartment.title.rendered.toLowerCase().includes(filter.search) || apartment.address.toLowerCase().includes(filter.search) || apartment.district.toLowerCase().includes(filter.search);
   
-      return isLocationMatch && isRoomsMatch && isMaxRentMatch;
+      return isLocationMatch && isRoomsMatch && isMaxRentMatch && isMinSizeMatch && isSearchMatch;
     });
   
     setAvailableApartments(filteredApartments);
@@ -78,10 +88,13 @@ console.log(apartments,"apartments"); // Add this line to check the fetched data
         <span className="small-label">Fully serviced apartments</span>
         <h2>Browse our apartments</h2>
         </div>
+     {/*  <span className='small-label'>Find your ideal apartment</span> */}
       <Filters
         locationChanged={locationChanged}
         roomsChanged={roomsChanged}
         priceChanged={priceChanged}
+        sizeChanged={sizeChanged}
+        searchChanged={searchChanged}
       />
       <ApartmentsList  filter={filter} availableApartments={availableApartments} apartments={apartments} />
     </>
