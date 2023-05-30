@@ -37,7 +37,7 @@ function ApartmentList (props) {
         <ErrorDiv />
         </>
          : <h4>Available apartments</h4>} 
-          <section>
+          <section className='apartments-flex'>
           {props.availableApartments && (
             <ul className="apartments-list-grid">
               {props.availableApartments.map((apartment) => (

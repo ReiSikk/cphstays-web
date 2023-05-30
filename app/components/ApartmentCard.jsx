@@ -93,13 +93,13 @@ function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apart
           <div className="bedrooms">
             {" "}
             <Image
-              src="/images/bed.svg"
+              src="/images/floor_plan.svg"
               alt="icon_1"
               width={20}
               height={20}
               className="card-icon"
             />
-            <p className="card_p"> {apartmentRooms ? `  ${apartmentRooms} bedrooms` : "unavailable"}</p>
+            <p className="card_p"> {apartmentRooms ? `  ${apartmentRooms} rooms` : "unavailable"}</p>
           </div>{" "}
           <div className="beds">
             {" "}
