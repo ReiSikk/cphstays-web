@@ -11,34 +11,26 @@ function TestimonialsSection() {
     const data = [
         {
             id: 1,
-            name: 'John Doe',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+            name: 'Alexander T.',
+            testimonial: 'CPH Stays exceeded our expectations. Their corporate housing was beautifully furnished, and the location was perfect for our team. The personalized service we received made us feel right at home. Highly recommended!'
         },
         {
             id: 2,
-            name: 'Nancy Doe',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+            name: 'Michael S. ',
+            testimonial: 'CPH Stays made my relocation to Copenhagen a breeze. From finding the perfect apartment to managing all the paperwork, their team took care of everything. The accommodation was top-notch, and our employee settled in smoothly.'
         },
         {
             id: 3,
-            name: 'Mike Doe',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+            name: 'Maria M.',
+            testimonial: 'We had a wonderful experience with CPH Stays. The apartment was elegant, fully furnished, and had all the amenities we needed. The location was ideal, close to transportation and local attractions. The exceptional service provided by the CPH Stays team made our stay truly enjoyable. Highly recommended!'
         },
         {
             id: 4,
-            name: 'Jane Doe',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
+            name: 'Christopher Z.',
+            testimonial: 'CPH Stays made our long-term work stay in Copenhagen effortless. The apartment was stylish, fully furnished, and had all the amenities we needed. The attentive and friendly staff provided exceptional service throughout our stay. Highly recommend them for corporate housing!'
         },
-        {
-            id: 5,
-            name: 'John Smith',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
-        },
-        {
-            id: 6,
-            name: 'Carl Smith',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.'
-        },
+        
+      
 
     ]
     
@@ -46,7 +38,6 @@ function TestimonialsSection() {
   return (
     <>
     <section className="user-testimonials-wrapper">
-<span className='small-label'>Lorem ipsum</span>
     <h3>What our guests say</h3>
     <div className="user-testimonials-section">
 {data.map(user => (

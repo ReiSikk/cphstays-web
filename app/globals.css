@@ -61,18 +61,54 @@ h5 {
 @media only screen and (max-width:899px) {
   h1 {
     font-size: 3.157em;
+    line-height: 1.1;
   }
   h2 {
     font-size: 2.369em;
+    line-height: 1.15;
   }
   h3 {
     font-size: 1.777em;
+    line-height: 1.15;
+
   }
   h4 {
     font-size: 1.333em;
+    line-height: 1.2;
+
   }
   h5 {
     font-size: 1em;
+    line-height: 1.2;
+  }
+  .h5-style {
+    font-size: 1em;
+    line-height: 1.2;
+
+  }
+}
+@media only screen and (max-width:414px) {
+  h1 {
+    font-size: 2.369em;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 1.77em;
+    line-height: 1.15;
+  }
+  h3 {
+    font-size: 1.333em;
+    line-height: 1.15;
+
+  }
+  h4 {
+    font-size: 1em;
+    line-height: 1.2;
+
+  }
+  h5 {
+    font-size: 1em;
+    line-height: 1.2;
   }
   .h5-style {
     font-size: 1em;
@@ -551,6 +587,10 @@ footer {
   padding-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 8px;
+}
+.hero-container .hero-img {
+  border-radius: 8px !important;
 }
 .hero-cta {
   background: var(--color-primary);
@@ -611,6 +651,10 @@ width: 100%;
   align-items: center;
   gap: 3rem;
 }
+.hero-cta .secondary-btn {
+  width: 100%;
+  max-width: 300px;
+}
 
 /* location select comp */
 .css-1agwao2-MuiFormControl-root {
@@ -658,7 +702,17 @@ width: 100%;
   width: fit-content;
   min-width: 100px;
   gap: 0.75rem;
-  /*  */
+  display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 0.75rem;
+}
+.corp-benefits-list li {
+  background: var(--color-primary);
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100px;
+  gap: 0.75rem;
   display: flex;
     align-items: center;
     border-radius: 50px;
@@ -671,19 +725,7 @@ width: 100%;
   max-width: 64px;
   max-height: 64px;
 }
-/* .benefits-list {
-  position: relative;
-  margin-top: -15rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 15vh;
-  max-width: -moz-fit-content;
-  width: 80%;
-  max-width: 650px;
-  height: -moz-fit-content;
-  height: fit-content;
-} */
+
 .benefits-list {
   position: absolute;
     top: 0;
@@ -694,6 +736,17 @@ width: 100%;
     list-style: none;
     flex-direction: column;
     gap: 1rem;
+}
+.corp-benefits-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 1rem;
 }
 @media only screen and (min-width: 599px) {
   .benefits-list {
@@ -716,7 +769,19 @@ width: 100%;
   position: relative;
 }
 
-
+.corphousing-bg-img {
+  width: 100%;
+  min-height: 400px;
+  height: 66vh;
+  max-height: 800px;
+  background-image: url('/images/benefits-bg.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.corp-hero-wrapper {
+  padding: 3rem 0rem 1rem 0rem;
+}
 .benefits-right {
   display: flex;
   flex-direction: column;
@@ -725,10 +790,21 @@ width: 100%;
   border-radius: 8px;
   padding: 1.5rem 1rem;
 }
+.benefits-right .small-label {
+  padding-bottom: 0rem;
+}
 .benefits-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+.benefits-list li span {
+  display: flex;
+  align-items: center;
+}
+.corp-benefits-list li span {
+  display: flex;
+  align-items: center;
 }
 
 .icon-flex {
@@ -745,6 +821,7 @@ width: 100%;
   .hdiw-section {
     flex-direction: row !important;
     gap: 2rem !important;
+    padding: 2rem 3rem;
   }
 }
 
@@ -775,7 +852,7 @@ gap: 1rem;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 3rem;
+  padding: 1.5rem 1rem;
   border-radius: 8px;
   margin: 5rem 0rem;
 }
@@ -800,27 +877,22 @@ label {
 .steps-list {
   list-style: none;
   padding-top: 1rem;
-  background: var(--color-background);
   color: var(--color-body-text);
   padding: 1.5rem 1rem 1rem 1rem;
   max-width: 899px;
   margin-top: 1rem;
   border-radius: 24px;
+  transition: all 0.3s ease;
 }
+
 
 .step {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 1.25rem;
   margin-bottom: 16px;
-}
-.step-content h5 {
-  padding-bottom: 0.25rem;
-}
-
-.icon {
-  margin-right: 10px;
 }
 
 .step-content {
@@ -834,7 +906,32 @@ label {
 
 .step-content p {
   margin: 0;
+  text-align: center;
 }
+.step-content h5 {
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+@media only screen and (min-width:414px) {
+  .step {
+    flex-direction: row;
+  }
+  .step-content p {
+    text-align: left;
+  }
+  .step-content h5 {
+    text-align: left;
+  }
+  .steps-list {
+  background: var(--color-background);
+  }
+}
+
+
+.icon {
+  margin-right: 10px;
+}
+
 
 .hdiw-img {
   object-fit: cover;
@@ -1410,6 +1507,7 @@ details > p, details ul li {
   background: var(--color-primary);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 @media only screen and (min-width:899px) {
   .filters-container {
     justify-content: flex-start;
@@ -1445,14 +1543,12 @@ details > p, details ul li {
   padding: 0;
 }
 .apartments-list-grid li {
-  width: 100%;
   height: 100%;
 }
 .apartments-list-grid li a:hover {
 text-decoration: none;
 }
 .apartments-flex {
-  padding-top: 1.75rem;
   padding-bottom: 3rem;
 }
 @media only screen and (min-width:599px) {
@@ -1545,10 +1641,10 @@ justify-self: center;
 }
 .single-apt-address {
   font-weight: 500;
-  font-size: 1.33rem;
-  padding-top: 0.5rem;
+  font-size: 1.1rem;
+  padding-top: 1rem;
   max-width: 62ch;
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   color: var(--color-darkgray-label);
 }
 .single-apt-images {
@@ -1678,6 +1774,9 @@ justify-self: center;
 }
 .apt-info-left {
   padding: 1rem;
+}
+.apt-info-left .small-label {
+  padding-bottom: 0rem;
 }
 
 /* ?Single Apartment page starts here */
