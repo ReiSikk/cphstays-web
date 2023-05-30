@@ -17,13 +17,13 @@ function Footer() {
         <div className="footer-links-group">
         <h4>Service</h4>
         <ul>
-        <Link href="/corphousing">
+        <Link href="/pages/corphousing">
           Corporate housing
         </Link>
-        <Link href="/apartments">
+        <Link href="/pages/apartments">
           Apartments
         </Link>
-        <Link href="/about">
+        <Link href="/pages/about">
           About us
         </Link>
         </ul>
@@ -34,7 +34,7 @@ function Footer() {
         <Link href="/">
           FAQ
         </Link>
-        <Link href="/contact">
+        <Link href="/pages/contact">
           Contact
         </Link>
         <Link href="tel:45 28 74 01 30">
