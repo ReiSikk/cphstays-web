@@ -82,6 +82,7 @@ h5 {
     line-height: 1.2;
   }
   .h5-style {
+    font-weight: 600 !important;
     font-size: 1em;
     line-height: 1.2;
 
@@ -176,12 +177,10 @@ p,li {
 
 
 .h5-style {
-  font-weight: 500;
+  font-weight: 600!important;
   font-family: var(--font-headings);
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
-
-
 
 .hidden {
   display: none;
@@ -730,7 +729,7 @@ width: 100%;
   position: absolute;
     top: 0;
     left: 0;
-    margin: 25% 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
     padding: 1rem;
     display: flex;
     list-style: none;
@@ -750,7 +749,7 @@ width: 100%;
 }
 @media only screen and (min-width: 599px) {
   .benefits-list {
-    margin-left: 4rem;
+    margin-left: 0rem;
     margin-right: auto;
   }
 }
@@ -1457,7 +1456,6 @@ details > p, details ul li {
 }
 .css-ahj2mt-MuiTypography-root {
   font-family: var(--font-headings) !important;
-  font-weight: 600;
 }
 .css-15v22id-MuiAccordionDetails-root > p {
   font-family: var(--font-poppins);

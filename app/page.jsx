@@ -23,17 +23,6 @@ export default function Home() {
   
   if (!mounted) return null; 
 
-/*   const images = [
-    { src: '/images/apt_example.jpg', alt: 'Image 1' },
-    { src: '/images/apt_example.jpg', alt: 'Image 2' },
-    { src: '/images/apt_example.jpg', alt: 'Image 3' },
-    { src: '/images/apt_example.jpg', alt: 'Image 4' },
-    { src: '/images/apt_example.jpg', alt: 'Image 5' },
-    // Add more images as needed
-  ]; */
-
-
-
   return (
     <>
     <header className={styles.header}>
@@ -41,8 +30,8 @@ export default function Home() {
     <section className={styles.hero}>
       <div className={styles.hero_inner}>
       <div className={styles.hero_text}>
-      <h1 className={styles.hero_title}>Call to action text</h1>
-      <p className={styles.hero_paragraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id tincidunt dapibus, magna libero sodales massa, sed aliquam nunc massa id nisl.</p>
+      <h1 className={styles.hero_title}>Find a home, away from home</h1>
+      <p className={styles.hero_paragraph}>Discover fully serviced apartments tailored to your needs and find your perfect home away from home in Copenhagen.</p>
       </div>
       <div className={styles.hero_numbers}>
         <div className={styles.hero_numbers_block}>
@@ -64,7 +53,7 @@ export default function Home() {
       </header> 
       <main className={styles.main}>
       <section className='testimonials-wrapper'>
-<span className='small-label'>Lorem ipsum</span>
+<span className='small-label'>All inclusive service</span>
     <h3>Services we offer</h3>
     <div className="testimonials-section">
     <div className={styles.landingpage_card}>
@@ -78,8 +67,8 @@ export default function Home() {
         </Link>
       </div>
       <div className={styles.card_content}>
-      <h4>Title 1</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <h4>Extended stays</h4>
+      <p>Flexible options for long-term accommodation needs</p>
       </div>
     </div>
     <div className={styles.landingpage_card}>
@@ -93,32 +82,31 @@ export default function Home() {
         </Link>
       </div>
       <div className={styles.card_content}>
-      <h4>Title 1</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <h4>Personalized Service</h4>
+      <p>Dedicated support for hassle-free long-term stays</p>
       </div>
     </div>
     <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star-darkblue.svg'  width={28} height={28} alt='star' />
         <Link href="/apartments" className={styles.card_link}>
-          <span>Read more</span>
+          <span>View apartments</span>
           <span>
             <Image src='/images/arrow-right-black.svg'  width={28} height={28} alt='right arrow' />
             </span>
         </Link>
       </div>
       <div className={styles.card_content}>
-      <h4>Title 1</h4>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <h4>Corporate Housing
+</h4>
+      <p>Tailored apartments for extended business stays</p>
       </div>
     </div>
    
     </div>
     </section>
     <HDIWsection  />
-    <ApartmentsCarousel />
     <TestimonialsSection />
-   {/*  <ImageCarousel images={images} /> */}
     <section className={styles.faq_and_contact}>
     <FaqAccordion />
     <ContactForm />

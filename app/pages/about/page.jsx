@@ -10,13 +10,6 @@ function page() {
     <section className='about-hero-wrapper'>
         <div className="about-hero-container">
           <div className="about-hero-img"></div>
-       {/*    <Image
-            src="/images/apartments-hero.jpg"
-            alt="hero image"
-            width={1200}
-            height={800}
-            className="hero-img"
-          /> */}
           <div className="hero-content">
           <ul className="about_list">
             <li>
@@ -58,20 +51,15 @@ function page() {
           </ul>
           </div>
         </div>
-         {/*  <div className="hero-quote">
-            <h3>Something</h3>
-          </div> */}
       </section>
           <h1>Comfort and convenience with CPH Stays</h1>
       <section className="benefits">
         <div className="benefits-container">
           <div className="benefits-right">
-            <p>Lorem ipsum</p>
-            <h3>Some kind of message </h3>
+            <p className='small-label'>Our story</p>
+            <h3>How CPH Stays started</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Quisquam, voluptatum.
+CPH Stays was born out of Cheryl Barnes&apos; passion for providing exceptional housing solutions to individuals seeking long-term stays in Copenhagen. With a deep understanding of the unique challenges faced by corporate travelers and those relocating for work, Cheryl envisioned a service that would prioritize comfort, convenience, and personalized support. Combining her extensive experience in property management and a genuine commitment to customer satisfaction, Cheryl established CPH Stays to create a seamless and unforgettable experience for every guest, making them feel at home in the beautiful city of Copenhagen.
             </p>
           </div>
           <div id="benefits">
