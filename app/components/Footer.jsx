@@ -11,7 +11,7 @@ function Footer() {
     <Link href="/">
      <Image src="/images/cphstays-logo.svg" alt="cphstays logo" width={200} height={200} className="logo-img" />
      </Link>
-     <p>Description of company or sth</p>
+     <p><i>Elevating Rentals, Simplifying management</i></p>
       </div>
       <div className="footer-right">
         <div className="footer-links-group">
@@ -37,8 +37,8 @@ function Footer() {
         <Link href="/contact">
           Contact
         </Link>
-        <Link href="tel:45 50179185">
-          45 50179185 - change nr
+        <Link href="tel:45 28 74 01 30">
+          +45 28 74 01 30
         </Link>
         </ul>
         </div>
@@ -46,7 +46,6 @@ function Footer() {
         </div>
         <div className="footer-links">
           <div className="footer-left">
-          <h5>Social</h5>
         <p className="copyright">Copyright ManageMyAir 2023 ©</p>
           </div>
         <div className="footer-some">
