@@ -35,19 +35,19 @@ function page() {
       <section className="benefits">
       <div className="benefits-container">
           <div className="benefits-right">
-            <p>Lorem ipsum</p>
-            <h3>Some kind of message </h3>
+            <p className='small-label'>Corporate housing</p>
+            <h3>CPH Stays: Corporate Housing in Copenhagen</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Quisquam, voluptatum.
+            Discover furnished apartments in prime locations. Personalized service for a remarkable stay.
+Relocate or provide long-term housing with ease. Experience convenience and comfort with CPH Stays.
+Make your stay extraordinary. Explore our offerings today.
             </p>
           </div>
           <div id="benefits">
           <div className="benefits-content">
         <div className="corphousing-bg-img"></div>
           <div className="benefits-left">
-            <ul className="benefits-list">
+            <ul className="corp-benefits-list">
               <li>
                 <span>
                   <Image
@@ -91,7 +91,6 @@ function page() {
         </div>
       </section>
       <HDIWsection />
-      <ApartmentsCarousel />
       <Testimonials /> 
       <TestimonialsSection />
 
