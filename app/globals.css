@@ -61,18 +61,52 @@ h5 {
 @media only screen and (max-width:899px) {
   h1 {
     font-size: 3.157em;
+    line-height: 1.1;
   }
   h2 {
     font-size: 2.369em;
+    line-height: 1.15;
   }
   h3 {
     font-size: 1.777em;
+    line-height: 1.15;
+
   }
   h4 {
     font-size: 1.333em;
+    line-height: 1.2;
+
   }
   h5 {
     font-size: 1em;
+    line-height: 1;
+  }
+  .h5-style {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width:414px) {
+  h1 {
+    font-size: 2.369em;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 1.77em;
+    line-height: 1.15;
+  }
+  h3 {
+    font-size: 1.333em;
+    line-height: 1.15;
+
+  }
+  h4 {
+    font-size: 1em;
+    line-height: 1.2;
+
+  }
+  h5 {
+    font-size: 1em;
+    line-height: 1.2;
   }
   .h5-style {
     font-size: 1em;
@@ -611,6 +645,10 @@ width: 100%;
   align-items: center;
   gap: 3rem;
 }
+.hero-cta .secondary-btn {
+  width: 100%;
+  max-width: 300px;
+}
 
 /* location select comp */
 .css-1agwao2-MuiFormControl-root {
@@ -716,7 +754,19 @@ width: 100%;
   position: relative;
 }
 
-
+.corphousing-bg-img {
+  width: 100%;
+  min-height: 400px;
+  height: 66vh;
+  max-height: 800px;
+  background-image: url('/images/benefits-bg.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.corp-hero-wrapper {
+  padding: 3rem 0rem 1rem 0rem;
+}
 .benefits-right {
   display: flex;
   flex-direction: column;
@@ -729,6 +779,10 @@ width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+.benefits-list li span {
+  display: flex;
+  align-items: center;
 }
 
 .icon-flex {
@@ -1410,6 +1464,7 @@ details > p, details ul li {
   background: var(--color-primary);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 @media only screen and (min-width:899px) {
   .filters-container {
     justify-content: flex-start;
@@ -1445,14 +1500,12 @@ details > p, details ul li {
   padding: 0;
 }
 .apartments-list-grid li {
-  width: 100%;
   height: 100%;
 }
 .apartments-list-grid li a:hover {
 text-decoration: none;
 }
 .apartments-flex {
-  padding-top: 1.75rem;
   padding-bottom: 3rem;
 }
 @media only screen and (min-width:599px) {
@@ -1545,10 +1598,10 @@ justify-self: center;
 }
 .single-apt-address {
   font-weight: 500;
-  font-size: 1.33rem;
-  padding-top: 0.5rem;
+  font-size: 1.1rem;
+  padding-top: 1rem;
   max-width: 62ch;
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   color: var(--color-darkgray-label);
 }
 .single-apt-images {
@@ -1678,6 +1731,9 @@ justify-self: center;
 }
 .apt-info-left {
   padding: 1rem;
+}
+.apt-info-left .small-label {
+  padding-bottom: 0rem;
 }
 
 /* ?Single Apartment page starts here */

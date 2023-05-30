@@ -10,7 +10,6 @@ import ContactForm from '../../components/ContactForm';
 
 
 function Apartmentpage({searchParams}) {
-  console.log(searchParams.address) // Logs "search"
 
   return (
     <>
@@ -20,9 +19,8 @@ function Apartmentpage({searchParams}) {
     <section className='apt-info-wrapper'>
       <div className='apt-info-left'>
       <span className='small-label'>{searchParams.district}</span>
-      {/* a h3 with the apartment rooms + apartment size from the searchparams */}
       <h3>{searchParams.rooms} room apartment of {searchParams.size} m2</h3>
-    <h4 className='single-apt-address'>{searchParams.address}</h4>
+    <p className='single-apt-address'>{searchParams.address}</p>
       <p className='apartment-desc'>{searchParams.description}</p>
       </div>
     <div className="apt-details-wrapper">
@@ -98,7 +96,6 @@ function Apartmentpage({searchParams}) {
     <section className="amenities_rules">
       <div className="amenities">
         <h4>Top amenities</h4>
-        {/* a ul list where each amenitie has a small bullet point icon to the left of it */}
         <ul>
           <li className='list-li-flex'><span><Image src="/images/check-icon.svg" width={28} height={28} alt="icon" /></span>Wifi</li>
           <li className='list-li-flex'><span><Image src="/images/check-icon.svg" width={28} height={28} alt="icon" /></span>Dishwasher</li>
@@ -110,7 +107,6 @@ function Apartmentpage({searchParams}) {
       </div>
       <div className="rules">
         <h4>House rules</h4>
-        {/* a ul list where each rule has a small bullet point icon to the left of it */}
         <ul>
           <li className='list-li-flex'><span><Image src="/images/check-icon.svg" width={28} height={28} alt="icon" /></span>Pets</li>
           <li className='list-li-flex'><span><Image src="/images/check-icon.svg" width={28} height={28} alt="icon" /></span>Sharing friendly</li>
@@ -129,12 +125,3 @@ function Apartmentpage({searchParams}) {
 
 export default Apartmentpage
 
-/* export async function getServerSideProps(context) {
-  
-    console.log(context.query) 
-    return {
-        props: { 
-           title: context.query.title //pass it to the page props
-        }
-    }
-  } */

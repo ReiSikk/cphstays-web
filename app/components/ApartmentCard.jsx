@@ -6,28 +6,6 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apartmentSize, apartmentBeds, apartmentDistrict, apartmentPhotos, apartmentTitle, imgData, apartmentDescription}) {
 
-/*   const router = useRouter();
-  const pathname = usePathname();
-
-  const handleClick = () => {
-    e.preventDefault();
-    router.push({
-      pathname: '/apartment',
-      query: {
-        apartmentLocation,
-        apartmentRooms,
-        apartmentPrice,
-        apartmentSize,
-        apartmentBeds,
-        apartmentDistrict,
-        apartmentPhotos,
-        apartmentTitle,
-        imgData
-      },
-    });
-  }; */
-
-
 
   return (
     <>
@@ -118,23 +96,6 @@ function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apart
     </>
   );
 }
-/* 
-        <div className="card_button">
-          {" "}
-          <Link href="/apartments">
-            <Image
-              src="/images/arrow_button.svg"
-              alt="arrow"
-              width={33.37}
-              height={32}
-              className="the_arrow"
-            />
-          </Link>
-        </div>
-                  <div className="cpr">
-            {" "}
-            <p className="cpr_p">CPR</p>
-            <p className="card_p">Available</p>
-          </div>*/
+
 
 export default ApartmentCard;

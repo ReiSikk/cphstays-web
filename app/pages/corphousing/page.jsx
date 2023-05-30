@@ -12,7 +12,7 @@ import ContactForm from '../../components/ContactForm'
 function page() {
   return (
     <>
-      <section>
+      <section className='corp-hero-wrapper'>
         <h1>Find a home away from home</h1>
         <div className="hero-container">
           <Image
@@ -26,22 +26,27 @@ function page() {
             <h3>Find your perfect apartment and send a request</h3>
             <div className="hero-cta-container">
               <Link href="/apartments" className="secondary-btn">
-                See the apartments
+                See apartments
               </Link>
             </div>
           </div>
         </div>
       </section>
       <section className="benefits">
-        <div className="benefits-container">
+      <div className="benefits-container">
+          <div className="benefits-right">
+            <p>Lorem ipsum</p>
+            <h3>Some kind of message </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Quisquam, voluptatum.
+            </p>
+          </div>
+          <div id="benefits">
+          <div className="benefits-content">
+        <div className="corphousing-bg-img"></div>
           <div className="benefits-left">
-            <Image
-              src="/images/benefits-bg.webp"
-              alt="benefits image"
-              width={1200}
-              height={800}
-              className="benefits-img"
-            />
             <ul className="benefits-list">
               <li>
                 <span>
@@ -53,7 +58,7 @@ function page() {
                     className="benefits-icon"
                   />{" "}
                 </span>
-                Lorem ipsum dolor sit amet, consect.
+                Fully serviced apartments
               </li>
               <li>
                 <span>
@@ -65,7 +70,7 @@ function page() {
                     className="benefits-icon"
                   />{" "}
                 </span>
-                Lorem ipsum dolor sit amet, consect.
+                24/7 customer service
               </li>
               <li>
                 <span>
@@ -77,18 +82,11 @@ function page() {
                     className="benefits-icon"
                   />{" "}
                 </span>
-                Lorem ipsum dolor sit amet, consect.
+                All inclusive service
               </li>
             </ul>
           </div>
-          <div className="benefits-right">
-            <p>Lorem ipsum</p>
-            <h3>Corporate housing benefits </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Quisquam, voluptatum.
-            </p>
+          </div>
           </div>
         </div>
       </section>

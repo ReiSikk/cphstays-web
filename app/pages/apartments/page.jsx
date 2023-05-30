@@ -5,12 +5,7 @@ import Filters from "../../components/Filters";
 
 
 function Page() {
-
-  /* console.log(
-    images[0]._embedded["wp:featuredmedia"][0].media_details.sizes.full
-      .source_url
-  ); */
-
+  // Fetch apartments from the API
   const [apartments, setApartments] = useState([]);
   const [availableApartments, setAvailableApartments] = useState([]);
 
@@ -27,12 +22,6 @@ function Page() {
 
     fetchData();
   }, []);
-
-
-
-  
-
-console.log(apartments,"apartments"); // Add this line to check the fetched data
   
 
 //set filters state
