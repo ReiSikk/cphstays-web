@@ -53,6 +53,7 @@ function ApartmentList (props) {
                 apartmentBeds={apartment.beds} 
                 apartmentDistrict={apartment.district} 
                 apartmentPhotos={apartment.apartment_photos} 
+               /* apartmentPhotos={apartment.apartment_photos.map((photo) => photo.guid)}  */
                 apartmentTitle={apartment.title.rendered} 
                 apartmentDescription={apartment.apartment_description}
                 imgData={apartment._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}

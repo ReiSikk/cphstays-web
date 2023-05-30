@@ -18,7 +18,7 @@ function ApartmentCard({apartmentLocation, apartmentRooms, apartmentPrice, apart
             size: apartmentSize,
             beds: apartmentBeds,
             district: apartmentDistrict,
-            photos: apartmentPhotos,
+             photos: apartmentPhotos, 
             title: apartmentTitle,
             img: imgData,
             description: apartmentDescription,

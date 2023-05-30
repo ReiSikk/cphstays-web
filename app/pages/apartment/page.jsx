@@ -10,6 +10,7 @@ import ContactForm from '../../components/ContactForm';
 
 
 function Apartmentpage({searchParams}) {
+  console.log(searchParams);
 
   return (
     <>
@@ -118,6 +119,11 @@ function Apartmentpage({searchParams}) {
         </ul>
         </div>
     </section>
+    <div>
+    {/*   {searchParams.photos.map((photo, index) => (
+        <Image key={index} src={photo.guid} alt="image" />
+      ))} */}
+    </div>
     <ContactForm />
     </>
   )
