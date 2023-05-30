@@ -8,7 +8,6 @@ function page() {
   return (
     <>
     <section className='about-hero-wrapper'>
-        <h1>What CPH Stays is about</h1>
         <div className="about-hero-container">
           <div className="about-hero-img"></div>
        {/*    <Image
@@ -30,7 +29,7 @@ function page() {
                   className="benefits-icon"
                 />{" "}
               </span>
-              Lorem ipsum dolor sit amet, consect.
+              Convenience: Hassle-free corporate accommodation
             </li>
             <li>
               <span>
@@ -42,7 +41,7 @@ function page() {
                   className="benefits-icon"
                 />{" "}
               </span>
-              Lorem ipsum dolor sit amet, consect.
+              Comfort: Fully serviced apartments
             </li>
             <li>
               <span>
@@ -54,7 +53,7 @@ function page() {
                   className="benefits-icon"
                 />{" "}
               </span>
-              Lorem ipsum dolor sit amet, consect.
+              Service: Hospitality experience
             </li>
           </ul>
           </div>
@@ -63,6 +62,7 @@ function page() {
             <h3>Something</h3>
           </div> */}
       </section>
+          <h1>Comfort and convenience with CPH Stays</h1>
       <section className="benefits">
         <div className="benefits-container">
           <div className="benefits-right">
@@ -89,7 +89,7 @@ function page() {
                     className="benefits-icon"
                   />{" "}
                 </span>
-                Lorem ipsum dolor sit amet, consect.
+                Fully serviced apartments
               </li>
               <li>
                 <span>
@@ -101,7 +101,7 @@ function page() {
                     className="benefits-icon"
                   />{" "}
                 </span>
-                Lorem ipsum dolor sit amet, consect.
+                24/7 customer service
               </li>
               <li>
                 <span>
@@ -113,7 +113,7 @@ function page() {
                     className="benefits-icon"
                   />{" "}
                 </span>
-                Lorem ipsum dolor sit amet, consect.
+                All inclusive service
               </li>
             </ul>
           </div>
