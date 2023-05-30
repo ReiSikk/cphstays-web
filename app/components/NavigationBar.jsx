@@ -4,9 +4,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useMediaQuery } from 'usehooks-ts'
 import BurgerMenu from './BurgerMenu';
+import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 
 function NavigationBar() {
+  const router = useRouter();
+  const { pathname, query } = router;
+
+  const isActive = (path) => {
+    const params = new URLSearchParams(query);
+    return params.get('page') === path;
+  };
+
+
   const matches = useMediaQuery("(max-width: 899px)");
   return (
     <>
@@ -20,19 +31,19 @@ function NavigationBar() {
            </Link>
          </div>
         <div className="nav-right">
-       <Link href="/pages/apartments">
+       <Link href='/' className={pathname === '/' ? 'active-link' : ''} >
+          Home
+        </Link>
+       <Link href='/pages/apartments' className={pathname === '/pages/apartments' ? 'active-link' : ''}>
           Apartments
         </Link>
-        <Link href="/pages/landlords">
-          For landlords
-        </Link>
-       <Link href="/pages/about">
+       <Link href="/pages/about" className={pathname === '/pages/about' ? 'active-link' : ''}>
           About
         </Link>
-        <Link href="/pages/contact">
+        <Link href="/pages/contact" className={pathname === '/pages/contact' ? 'active-link' : ''}>
           Contact
         </Link>
-          <Link className="primary-btn" href="/pages/corphousing">Corporate housing</Link>
+          <Link id="primary-btn" className={pathname === '/pages/corphousing' ? 'active-link' : ''}  href="/pages/corphousing">Corporate housing</Link>
         </div>
         </>
 }
