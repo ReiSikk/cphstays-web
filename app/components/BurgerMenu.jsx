@@ -26,11 +26,11 @@ function BurgerMenu() {
       <span></span>
       <span></span>
       <ul id="menu">
-        <Link href="/"><li>Home</li></Link>
-        <Link href="/pages/corphousing" className='animated-item'><li>Corporate housing</li></Link>
-        <Link href="/pages/apartments" className='animated-item'><li>Apartments</li></Link>
-        <Link href="/pages/about" className='animated-item'><li>About</li></Link>
-        <Link href="/pages/contact" className='animated-item'><li>Contact</li></Link>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/pages/corphousing" className='animated-item'>Corporate housing</Link></li>
+        <li><Link href="/pages/apartments" className='animated-item'>Apartments</Link></li>
+        <li><Link href="/pages/about" className='animated-item'>About</Link></li>
+        <li><Link href="/pages/contact" className='animated-item'>Contact</Link></li>
       </ul>
     </div>
 

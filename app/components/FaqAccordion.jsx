@@ -39,8 +39,8 @@ export default function FaqAccordion() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel3a-content"
+          id="panel3a-header"
         >
           <Typography className='h5-style'>Are utilities included in the rent price?</Typography>
         </AccordionSummary>
@@ -53,8 +53,8 @@ export default function FaqAccordion() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel4a-content"
+          id="panel4a-header"
         >
           <Typography className='h5-style'>Can I register for CPR (Civil Registration System) at a corporate apartment with CPH Stays?</Typography>
         </AccordionSummary>

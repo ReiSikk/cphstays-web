@@ -258,7 +258,7 @@ p,li {
   color: var(--color-darkblue);
 } */
 #menuToggle li:not(:hover) {
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 #menuToggle li {
@@ -759,7 +759,7 @@ width: 100%;
   min-height: 400px;
   height: 66vh;
   max-height: 800px;
-  background-image: url('/images/about-section-2.jpg');
+  background-image: url('/images/about-section-2.webp');
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -899,7 +899,7 @@ label {
   flex-direction: column;
 }
 
-.step-content h5 {
+.step-content h4 {
   margin: 0;
 }
 
@@ -907,7 +907,7 @@ label {
   margin: 0;
   text-align: center;
 }
-.step-content h5 {
+.step-content h4 {
   padding-bottom: 0.25rem;
   text-align: center;
 }
@@ -918,7 +918,7 @@ label {
   .step-content p {
     text-align: left;
   }
-  .step-content h5 {
+  .step-content h4 {
     text-align: left;
   }
   .steps-list {
@@ -1392,7 +1392,7 @@ padding-top: 0.5rem;
   min-height: 400px;
   height: 66vh;
   max-height: 800px;
-  background-image: url('/images/apartments-hero.jpg');
+  background-image: url('/images/apartments-hero.webp');
   background-size: cover;
   background-position: center;
   border-radius: 8px;

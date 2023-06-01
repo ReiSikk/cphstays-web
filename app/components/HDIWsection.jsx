@@ -16,7 +16,7 @@ function HDIWsection() {
             <Image src='/images/down-arrow.svg' alt='down arrow icon' width={28} height={28} className="down-arrow-icon" />
         </div>
           <div className="step-content">
-            <h5>Discover Your Perfect Accommodation</h5>
+            <h4>Discover Your Perfect Accommodation</h4>
             <p>Browse through our diverse portfolio to find the ideal accommodation that suits your needs and preferences</p>
           </div>
       </div>
@@ -28,7 +28,7 @@ function HDIWsection() {
             <Image src='/images/down-arrow.svg' alt='down arrow icon' width={28} height={28} className="down-arrow-icon" />
         </div>
           <div class="step-content">
-            <h5>Contact</h5>
+            <h4>Contact</h4>
             <p>Get in touch with our knowledgeable team of housing specialists. Reach out via phone or email to start the conversation.</p>
           </div>
       </div>
@@ -40,7 +40,7 @@ function HDIWsection() {
             <Image src='/images/down-arrow.svg' alt='down arrow icon' width={28} height={28} className="down-arrow-icon" />
         </div>
           <div class="step-content">
-            <h5>Enjoy a Seamless Booking Experience</h5>
+            <h4>Enjoy a Seamless Booking Experience</h4>
             <p>Once you have found your ideal apartment, our team will handle all the rest - from lease agreements to move-in logistics, ensuring a smooth and hassle-free booking experience for you.</p>
           </div>
       </div>
