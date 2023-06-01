@@ -6,11 +6,10 @@ import NavigationBar from './components/NavigationBar'
 import styles from './page.module.css'
 import Link from 'next/link'
 import HDIWsection from './components/HDIWsection'
-import ApartmentsCarousel from './components/ApartmentsCarousel'
 import TestimonialsSection from './components/TestimonialsSection'
 import FaqAccordion from './components/FaqAccordion'
 import ContactForm from './components/ContactForm'
-import ImageCarousel from './components/Carousel'
+
 
 
 export default function Home() {
