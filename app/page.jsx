@@ -47,7 +47,7 @@ export default function Home() {
           <p>Years of experience</p>
         </div>
       </div>
-      <Link href="/apartments" className={styles.secondary_btn}>See apartments</Link>
+      <Link href="/pages/apartments" className={styles.secondary_btn}>See apartments</Link>
       </div>
     </section>
       </header> 
@@ -59,7 +59,7 @@ export default function Home() {
     <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star.svg'  width={28} height={28} alt='star' />
-        <Link href="/apartments" className={styles.card_link}>
+        <Link href="/pages/apartments" className={styles.card_link}>
           <span>Read more</span>
           <span>
             <Image src='/images/arrow-right.svg'  width={28} height={28} alt='right arrow' />
@@ -74,7 +74,7 @@ export default function Home() {
     <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star-darkblue.svg'  width={28} height={28} alt='star' />
-        <Link href="/apartments" className={styles.card_link}>
+        <Link href="/pages/about" className={styles.card_link}>
           <span>Read more</span>
           <span>
             <Image src='/images/arrow-right-black.svg'  width={28} height={28} alt='right arrow' />
@@ -89,7 +89,7 @@ export default function Home() {
     <div className={styles.landingpage_card}>
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star-darkblue.svg'  width={28} height={28} alt='star' />
-        <Link href="/apartments" className={styles.card_link}>
+        <Link href="/pages/corphousing" className={styles.card_link}>
           <span>View apartments</span>
           <span>
             <Image src='/images/arrow-right-black.svg'  width={28} height={28} alt='right arrow' />
