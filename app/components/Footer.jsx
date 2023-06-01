@@ -31,7 +31,7 @@ function Footer() {
         <div className="footer-links-group">
         <h4>Contact</h4>
         <ul>
-        <Link href="/">
+        <Link href="/pages/faq">
           FAQ
         </Link>
         <Link href="/pages/contact">

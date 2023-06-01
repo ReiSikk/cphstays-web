@@ -4,7 +4,7 @@ import Image from 'next/image'
 function WhatWeAreAbout() {
   return (
     <section className='testimonials-wrapper'>
-    <span className='small-label'>Lorem ipsum</span>
+    <span className='small-label'>What drives us</span>
         <h3>What we are about</h3>
         <div className="testimonials-section">
         <div class="testimonial-card">
@@ -14,7 +14,7 @@ function WhatWeAreAbout() {
           </div>
           <h4>Our mission</h4>
             </div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p>Providing exceptional corporate housing and long-term stays for a comfortable and convenient home-away-from-home experience</p>
         </div>
         <div class="testimonial-card">
             <div className="icon-flex">
@@ -23,7 +23,7 @@ function WhatWeAreAbout() {
           </div>
           <h4>Our vision</h4>
           </div>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <p>Be the the leading provider of corporate housing and long-term stays in Copenhagen, setting the standard for exceptional comfort, convenience, and personalized service</p>
         </div>
         <div class="testimonial-card">
             <div className="icon-flex">
@@ -32,7 +32,7 @@ function WhatWeAreAbout() {
           </div>
           <h4>Our values</h4>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident hic aliquam nihil sapiente exercitationem perspiciatis magnam quidem.</p>
+          <p>Excellence, Hospitality, Commitment</p>
         </div>
         </div>
     </section>
