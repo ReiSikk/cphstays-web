@@ -30,7 +30,7 @@ export default function Home() {
       <div className={styles.hero_inner}>
       <div className={styles.hero_text}>
       <h1 className={styles.hero_title}>Find your ideal nest</h1>
-      <p className={styles.hero_paragraph}>Fully furnished and serviced temporary homes for work-travellers and expatsin Copenhagen.</p>
+      <p className={styles.hero_paragraph}>Fully furnished and serviced temporary homes for work-travellers and expats in Copenhagen.</p>
       </div>
       <div className={styles.hero_numbers}>
         <div className={styles.hero_numbers_block}>
