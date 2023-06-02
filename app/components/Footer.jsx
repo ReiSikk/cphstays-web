@@ -11,7 +11,8 @@ function Footer() {
     <Link href="/">
      <Image src="/images/cphstays-logo.svg" alt="cphstays logo" width={200} height={200} className="logo-img" />
      </Link>
-     <p><i>Elevating Rentals, Simplifying management</i></p>
+     <p><i>Temporary homes for travellers and expats
+</i></p>
       </div>
       <div className="footer-right">
         <div className="footer-links-group">

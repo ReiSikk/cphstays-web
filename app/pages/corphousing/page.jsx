@@ -12,7 +12,7 @@ function page() {
   return (
     <>
       <section className='corp-hero-wrapper'>
-        <h1>Find a home away from home</h1>
+        <h1>Partner up with CPH Stays</h1>
         <div className="hero-container">
           <Image
             src="/images/hero-img.webp"
