@@ -29,8 +29,8 @@ export default function Home() {
     <section className={styles.hero}>
       <div className={styles.hero_inner}>
       <div className={styles.hero_text}>
-      <h1 className={styles.hero_title}>Find a home, away from home</h1>
-      <p className={styles.hero_paragraph}>Discover fully serviced apartments tailored to your needs and find your perfect home away from home in Copenhagen.</p>
+      <h1 className={styles.hero_title}>Find your ideal nest</h1>
+      <p className={styles.hero_paragraph}>Fully furnished and serviced temporary homes for work-travellers and expatsin Copenhagen.</p>
       </div>
       <div className={styles.hero_numbers}>
         <div className={styles.hero_numbers_block}>
@@ -59,15 +59,15 @@ export default function Home() {
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star.svg'  width={28} height={28} alt='star' />
         <Link href="/pages/apartments" className={styles.card_link}>
-          <span>Read more</span>
+          <span>View apartments</span>
           <span>
             <Image src='/images/arrow-right.svg'  width={28} height={28} alt='right arrow' />
             </span>
         </Link>
       </div>
       <div className={styles.card_content}>
-      <h4>Extended stays</h4>
-      <p>Flexible options for long-term accommodation needs</p>
+      <h4>Temporary homes</h4>
+      <p>Flexible options for your accommodation needs</p>
       </div>
     </div>
     <div className={styles.landingpage_card}>
@@ -89,7 +89,7 @@ export default function Home() {
       <div className={styles.card_link_wrapper}>
         <Image src='/images/star-darkblue.svg'  width={28} height={28} alt='star' />
         <Link href="/pages/corphousing" className={styles.card_link}>
-          <span>View apartments</span>
+          <span>Read more</span>
           <span>
             <Image src='/images/arrow-right-black.svg'  width={28} height={28} alt='right arrow' />
             </span>
